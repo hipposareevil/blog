@@ -1,0 +1,12 @@
+# Hugo output / cache
+/public/
+/resources/_gen/
+/.hugo_build.lock
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+
+# Blog photos (keep locally, not in git)
+content/posts/**/gallery/**
+content/posts/**/feature.*

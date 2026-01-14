@@ -1,0 +1,15 @@
++++
+title = "Media Tracker"
+date = "2025-12-15"
+draft = false
+tags = ["tech"]
+summary = "I came across a cool media tracker and searched around for some open source version of it. Two hours later I realized I could use AI to create one, so I make an account over on lovable and started 'coding'."
++++
+
+I came across a cool [media tracker](https://media.ginatrapani.org/) and searched around for some open source version of it.  Two hours later I realized I could use AI to create one, so I make an account over on [lovable](https://lovable.dev) and started 'coding'.
+
+Three hours later I had a very usable web page that I could pull from github and put on my website.
+
+To make something like this by hand would probably take 4 weeks and I had it here up in hours. Glad I got out of programming when I did.
+
+[My Media Tracker](http://willprogramforfood.com:3000/)

@@ -1,0 +1,14 @@
++++
+title = "Dan and Kate's Wedding!"
+date = "1970-01-01"
+draft = false
+tags = ["travel", "colorado"]
+categories = ["travel"]
+summary = "Dan and Kate got married this weekend!"
++++
+
+Dan and Kate got married this weekend!
+
+<h2>Photos</h2>
+
+{{< gallery id="gallery" >}}

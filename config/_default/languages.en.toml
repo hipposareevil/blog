@@ -1,0 +1,21 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "blog.willprogramforfood.com"
+
+[params]
+  displayName = "English"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  logo = "img/logo.jpg"
+  description = "Hippo Adventures"
+
+[params.author]
+  name = "Sam Jackson"
+  email = "hipposareevil@protonmail.com"
+  image = "img/blackhole.png"
+  imageQuality = 96
+  headline = "Hippo Adventures"
+#  bio = "Hippo Bit"
+

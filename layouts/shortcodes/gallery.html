@@ -1,0 +1,9 @@
+{{ $galleryId := .Get "id" | default "gallery" }}
+<div class="justified-gallery" id="{{ $galleryId }}">
+  {{ range .Page.Resources.Match (printf "%s/*" $galleryId) }}
+    <a href="{{ .RelPermalink }}" class="glightbox" data-gallery="{{ $galleryId }}">
+      {{ $thumb := .Resize "800x" }}
+      <img src="{{ $thumb.RelPermalink }}" alt="{{ .Name }}">
+    </a>
+  {{ end }}
+</div>

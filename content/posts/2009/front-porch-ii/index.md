@@ -1,0 +1,11 @@
++++
+title = "Front Porch II"
+date = "2009-07-12"
+draft = false
+tags = ["home"]
+categories = ["home"]
+summary = "The deck work has continued. Last weekend we got all of the old porch out and this weekend we staked out the new posts and put them in."
++++
+
+The deck work has continued.  Last weekend we got all of the old porch out and this weekend we staked out the new posts and put them in.  40 bags of concrete later we are now ready for the joists.
+{{< gallery id="gallery" >}}

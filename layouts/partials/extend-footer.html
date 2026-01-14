@@ -1,0 +1,111 @@
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+  function galleryRowHeight() {
+    return window.innerWidth >= 1024 ? 340 :
+           window.innerWidth >= 640  ? 280 : 220;
+  }
+
+  function initGallery() {
+    const $g = $(".justified-gallery");
+    if (!$g.length) return;
+
+    // Re-init safely if needed
+    if ($g.data("jg.initialized")) {
+      $g.justifiedGallery("destroy");
+    }
+
+    $g.justifiedGallery({
+      rowHeight: galleryRowHeight(),
+      margins: 8,
+      lastRow: "nojustify"
+    });
+  }
+
+  window.addEventListener("load", function () {
+    initGallery();
+
+    // Lightbox only if there are any matching links
+    if (document.querySelector(".glightbox")) {
+      GLightbox({ selector: ".glightbox", touchNavigation: true, loop: true });
+    }
+  });
+
+  window.addEventListener("resize", function () {
+    initGallery();
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hash = window.location.hash.slice(1);
+    if (!hash) return;
+
+    const details = document.getElementById(hash);
+    if (details && details.tagName === "DETAILS") {
+      details.open = true;
+      details.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  });
+</script>
+
+
+<!-- scroll main page -->
+<script>
+(function () {
+  let nextPage = 2;
+  let loading = false;
+  let done = false;
+
+  async function loadNextPage() {
+    if (loading || done) return;
+    loading = true;
+
+    const url = `/page/${nextPage}/`;
+    try {
+      const res = await fetch(url);
+      if (!res.ok) {
+        done = true;
+        return;
+      }
+
+      const html = await res.text();
+      const doc = new DOMParser().parseFromString(html, "text/html");
+
+      const newPosts = doc.querySelectorAll("article.article-link--simple");
+      if (!newPosts.length) {
+        done = true;
+        return;
+      }
+
+      const container = document.getElementById("post-list");
+
+if (!container) {
+console.warn("Infinite scroll: post-list container not found");
+done = true;
+return;
+}
+
+      newPosts.forEach(el => container.appendChild(el));
+
+      nextPage++;
+      loading = false;
+    } catch (e) {
+      console.error("Infinite scroll failed:", e);
+      loading = false;
+    }
+  }
+
+  window.addEventListener("scroll", () => {
+    if (done) return;
+    const scrollBottom = window.innerHeight + window.scrollY;
+    const threshold = document.body.offsetHeight - 800;
+    if (scrollBottom >= threshold) {
+      loadNextPage();
+    }
+  });
+})();
+</script>

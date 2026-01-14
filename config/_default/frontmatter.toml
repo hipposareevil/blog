@@ -1,0 +1,7 @@
+[posts.climb]
+tags = ["climb"]
+categories = ["climb"]
+
+[posts.travel]
+tags = ["travel"]
+categories = ["travel"]

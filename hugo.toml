@@ -1,0 +1,8 @@
+baseURL = 'http://blog.willprogramforfood.com/'
+languageCode = 'en-us'
+title = 'ramblings'
+
+[module]
+  [[module.imports]]
+    path = "github.com/nunocoracao/blowfish/v2"
+    

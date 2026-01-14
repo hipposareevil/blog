@@ -1,0 +1,72 @@
+{{ define "main" }}
+
+<section class="mx-auto max-w-5xl px-4">
+
+  <h1 class="text-4xl font-extrabold mb-10">
+    {{ .Title }}
+  </h1>
+
+  <div class="grid gap-12 md:grid-cols-2">
+
+    <!-- =========================
+         ARCHIVES (BY YEAR)
+         ========================= -->
+    <div>
+      <h2 class="text-2xl font-bold mb-4">
+        Archives
+      </h2>
+
+      {{ $pages := where .Site.RegularPages "Type" "posts" }}
+      {{ $grouped := $pages.GroupByDate "2006" }}
+
+      <ul class="space-y-3">
+        {{ range $grouped }}
+          <li>
+            <a
+              href="/archives/#{{ .Key }}"
+              class="flex justify-between items-baseline hover:underline">
+              <span class="font-medium">
+                {{ .Key }}
+              </span>
+              <span class="text-sm text-neutral-400">
+                {{ len .Pages }}
+              </span>
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <!-- =========================
+         CATEGORIES
+         ========================= -->
+    <div>
+      <h2 class="text-2xl font-bold mb-4">
+        Categories
+      </h2>
+
+      {{ $cats := .Site.Taxonomies.categories }}
+
+      <ul class="space-y-3">
+        {{ range $name, $taxonomy := $cats }}
+          <li>
+            <a
+              href="{{ $taxonomy.Page.RelPermalink }}"
+              class="flex justify-between items-baseline hover:underline">
+              <span class="capitalize font-medium">
+                {{ $name }}
+              </span>
+              <span class="text-sm text-neutral-400">
+                {{ len $taxonomy.Pages }}
+              </span>
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+{{ end }}

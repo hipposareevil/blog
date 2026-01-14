@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+{{ $pages := where site.RegularPages "Section" "posts" }}
+{{ $pages = $pages.ByDate.Reverse }}
+{{ $p := .Paginate $pages }}
+
+<section>
+  <h2 class="mt-8 text-2xl font-extrabold mb-10">Recent</h2>
+
+  <section id="post-list" class="space-y-10 w-full">
+    {{ range $p.Pages }}
+      {{ partial "article-link/simple.html" . }}
+    {{ end }}
+  </section>
+</section>
+
+{{ end }}

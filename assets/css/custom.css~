@@ -1,0 +1,7 @@
+/* Constrain list page cards (home/section lists), but do not affect single posts */
+body:not(.page) main .recent-articles,
+body:not(.page) main .recent-articles > * {
+  max-width: 80rem;          /* ~1280px */
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,19 @@
++++
+title = "Ingalls Peak"
+date = "2006-07-26"
+draft = false
+tags = ["climbing", "washington"]
+categories = ["climbing"]
+summary = "Esther, Matt, Kate, Dan and I went up to Washington to climb Ingalls Peak over the weekend. We were going to do Mt. Stuart..."
++++
+
+Esther, Matt, Kate, Dan and I went up to Washington to climb Ingalls Peak over the weekend. We were going to do Mt. Stuart but changed our minds after we heard that it'd be over 16 hours.  We figured we should try something smaller first.  So our friend Bob told us to do Ingalls Peak right next door.
+
+On Saturday we did the easier (5.4-5.6) South Ridge route.  It was super fun and easy.  Great views from the top of Rainier and the Cascades and of course Stuart off to the East.  We got attacked by swarms of biting flies and mosquitos and had an early night.  I tried out my new bivy sack, which worked great except for the exposure to the bugs.  Bastards.
+
+On Sunday we rose to a nice sunrise over Mt. Stuart.  We huffed it over to the East Ridge after a quick breakfast.  I lugged up over 11 liters of water to the base, thinking we'd need it all.  It was way to heavy and after drinking our fill I dumped close to 6 liters of water.  Matt joked that we'd regret it later, luckily we didn't.
+
+The East route was a bit harder than the South but was more exciting with great exposure and great climbing.  I learned a cheap lesson to always wear your helmet.  While Matt was climbing I took my helmet off for a second and got hit with a fist sized rock in my back, luckily missing my naked head.
+
+The route was super fun, good protection when needed and a few really fun hand traverses with cool exposure.  We all enjoyed our first real alpine climbing experience and hope to get in a few more this season.  We ended up getting down kindof late and returned to the cars around 10pm and back to Portland at 3am.
+{{< gallery id="gallery" >}}
