@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main id="main-content" class="grow">
+
+{{ $pages := where .Site.RegularPages "Section" "posts" }}
+{{ $count := len $pages }}
+
+{{ if gt $count 0 }}
+  {{ $index := mod (now.Unix) $count }}
+  {{ $page := index $pages $index }}
+
+  <meta http-equiv="refresh" content="0; url={{ $page.RelPermalink }}">
+  <p class="p-8 text-center text-neutral-500">
+    Taking you somewhere unexpected…
+  </p>
+{{ else }}
+  <p class="p-8 text-center text-neutral-500">
+    No posts found.
+  </p>
+{{ end }}
+
+</main>
+{{ end }}

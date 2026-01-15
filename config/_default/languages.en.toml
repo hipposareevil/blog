@@ -8,7 +8,7 @@ title = "blog.willprogramforfood.com"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  logo = "img/logo.jpg"
+  logo = "img/wizard_entering.png"
   description = "Hippo Adventures"
 
 [params.author]

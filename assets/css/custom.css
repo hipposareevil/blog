@@ -153,3 +153,36 @@ a[href^="/tags/"] span > span.rounded-md.border {
 #load-more-wrapper {
   grid-column: 1 / -1;
 }
+
+
+/* Category/tag landing cards: slightly deeper hover */
+a.group:hover { transform: translateY(-1px); }
+
+
+
+/* Fantasy d20 roll */
+.d20 {
+  perspective: 600px;
+}
+
+.d20-svg {
+  transform-origin: 50% 50%;
+  transition: transform 600ms cubic-bezier(.34,1.56,.64,1);
+}
+
+a:hover .d20-svg,
+button:hover .d20-svg {
+  transform: rotateZ(180deg) rotateX(25deg) rotateY(-20deg);
+}
+
+
+/* Browse cards: responsive heights without Tailwind arbitrary classes */
+.browse-card--categories { height: 240px; }
+.browse-card--tags { height: 210px; }
+.browse-card--archives { height: 190px; }
+
+@media (min-width: 768px){
+  .browse-card--categories { height: 280px; }
+  .browse-card--tags { height: 240px; }
+  .browse-card--archives { height: 210px; }
+}

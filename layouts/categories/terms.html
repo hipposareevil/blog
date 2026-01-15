@@ -1,0 +1,122 @@
+{{ define "main" }}
+<main id="main-content" class="grow">
+
+<!-- HERO (constrained) -->
+<section class="w-full">
+  <div class="mx-auto max-w-6xl px-4 pt-6">
+    <div
+      class="relative overflow-hidden rounded-xl border border-neutral-300 dark:border-neutral-700"
+      style="aspect-ratio: 16 / 7; min-height: 320px;">
+
+      <img
+        src="/img/wizard_category.png"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover object-[center_20%]" />
+
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent"></div>
+
+      <div class="absolute inset-0 flex items-end">
+        <div class="p-6 sm:p-8">
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-white drop-shadow">
+            Categories
+          </h1>
+          <p class="mt-1 text-white/90 max-w-2xl">
+            Browse trips by activity and theme.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- /HERO -->
+
+
+  <!-- Masonry helpers (scoped to this page) -->
+  <style>
+    .masonry {
+      column-gap: 1.25rem;
+    }
+    @media (min-width: 640px) { .masonry { column-count: 2; } }
+    @media (min-width: 1024px) { .masonry { column-count: 3; } }
+    @media (min-width: 1280px) { .masonry { column-count: 4; } }
+
+    .masonry-item {
+      break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+  </style>
+
+  <!-- CONTENT -->
+  <section class="mx-auto max-w-6xl px-4 py-10">
+    {{ $terms := .Data.Terms.Alphabetical }}
+    {{ if not $terms }}
+      <p class="text-neutral-500 dark:text-neutral-400">No categories yet.</p>
+    {{ else }}
+
+      <div class="masonry">
+
+        {{ range $i, $t := $terms }}
+          {{ $termPage := $t.Page }}
+          {{ $count := $t.Count }}
+
+          {{/* cover = feature image from most recent post in this category */}}
+          {{ $cover := "" }}
+          {{ with first 1 $termPage.Pages.ByDate.Reverse }}
+            {{ $p := index . 0 }}
+            {{ with $p.Resources.GetMatch "feature.*" }}
+              {{ $cover = .RelPermalink }}
+            {{ end }}
+          {{ end }}
+
+          {{/* Vary card heights a bit for a masonry feel */}}
+          {{ $mod := mod $i 6 }}
+          {{ $aspect := "aspect-[4/3]" }}
+          {{ if eq $mod 1 }}{{ $aspect = "aspect-[1/1]" }}{{ end }}
+          {{ if eq $mod 2 }}{{ $aspect = "aspect-[3/4]" }}{{ end }}
+          {{ if eq $mod 3 }}{{ $aspect = "aspect-[3/2]" }}{{ end }}
+          {{ if eq $mod 4 }}{{ $aspect = "aspect-[5/4]" }}{{ end }}
+          {{ if eq $mod 5 }}{{ $aspect = "aspect-[16/10]" }}{{ end }}
+
+          <a href="{{ $termPage.RelPermalink }}"
+             class="masonry-item group overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-700 bg-neutral-50/40 dark:bg-neutral-900/20 hover:bg-neutral-50 dark:hover:bg-neutral-900 transition">
+
+            <div class="relative {{ $aspect }} overflow-hidden">
+              {{ if $cover }}
+                <img
+                  src="{{ $cover }}"
+                  alt="{{ $termPage.Title }}"
+                  loading="lazy"
+                  decoding="async"
+                  class="h-full w-full object-cover transform transition duration-300 group-hover:scale-[1.03]" />
+              {{ else }}
+                <div class="h-full w-full bg-neutral-200 dark:bg-neutral-800"></div>
+              {{ end }}
+
+              <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent"></div>
+
+              <div class="absolute bottom-0 left-0 right-0 p-3">
+                <div class="flex items-baseline justify-between gap-2">
+                  <h2 class="text-lg font-bold text-white drop-shadow">
+                    {{ $termPage.Title }}
+                  </h2>
+                  <span class="text-xs text-white/90">
+                    {{ $count }}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </a>
+        {{ end }}
+
+      </div>
+
+    {{ end }}
+  </section>
+
+</main>
+{{ end }}

@@ -1,0 +1,69 @@
+{{ define "main" }}
+<main id="main-content" class="grow">
+
+<!-- HERO (Tags) -->
+<section class="w-full">
+  <div class="mx-auto max-w-6xl px-4 pt-6">
+    <div
+      class="relative overflow-hidden rounded-xl border border-neutral-300 dark:border-neutral-700"
+      style="aspect-ratio: 16 / 8; min-height: 280px;">
+
+      <img
+        src="/img/wizard_tags.png"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover object-[center_25%]" />
+
+      <div class="absolute inset-0 bg-black/40"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent"></div>
+
+      <div class="absolute inset-0 flex items-end">
+        <div class="p-6 sm:p-8">
+          <h1 class="text-3xl sm:text-4xl font-extrabold text-white drop-shadow">
+            Tags
+          </h1>
+          <p class="mt-1 text-white/90 max-w-2xl">
+          Keywords that cut across places, seasons, and activities.
+
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- /HERO -->
+
+  <!-- CONTENT -->
+  <section class="mx-auto max-w-6xl px-4 py-10">
+    {{ $terms := .Data.Terms.ByCount }}
+    {{ if not $terms }}
+      <p class="text-neutral-500 dark:text-neutral-400">No tags yet.</p>
+    {{ else }}
+      <h2 class="text-xl font-bold mb-4">Popular</h2>
+      <div class="flex flex-wrap gap-2 mb-10">
+        {{ range first 30 $terms }}
+          <a href="{{ .Page.RelPermalink }}"
+             class="rounded-md border border-neutral-300 dark:border-neutral-700 px-3 py-1 text-sm hover:bg-neutral-50 dark:hover:bg-neutral-900 transition">
+            {{ .Page.Title }}
+            <span class="ms-1 text-xs text-neutral-500 dark:text-neutral-400">({{ .Count }})</span>
+          </a>
+        {{ end }}
+      </div>
+
+      <h2 class="text-xl font-bold mb-4">All tags</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        {{ range $terms }}
+          <a href="{{ .Page.RelPermalink }}"
+             class="group rounded-xl border border-neutral-300 dark:border-neutral-700 p-4 hover:bg-neutral-50 dark:hover:bg-neutral-900 transition">
+            <div class="flex items-baseline justify-between">
+              <span class="font-bold group-hover:underline">{{ .Page.Title }}</span>
+              <span class="text-xs text-neutral-500 dark:text-neutral-400">{{ .Count }}</span>
+            </div>
+          </a>
+        {{ end }}
+      </div>
+    {{ end }}
+  </section>
+
+</main>
+{{ end }}

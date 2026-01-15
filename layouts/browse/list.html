@@ -1,72 +1,117 @@
 {{ define "main" }}
+<main id="main-content" class="grow">
 
-<section class="mx-auto max-w-5xl px-4">
+  <!-- HERO -->
+  <section class="w-full">
+    <div class="mx-auto max-w-6xl px-4 pt-6">
+      <div
+        class="relative overflow-hidden rounded-xl border border-neutral-300 dark:border-neutral-700"
+        style="aspect-ratio: 16 / 7; min-height: 320px;">
 
-  <h1 class="text-4xl font-extrabold mb-10">
-    {{ .Title }}
-  </h1>
+        <img
+          src="/img/wizard_browse.png"
+          alt=""
+          class="absolute inset-0 h-full w-full object-cover object-[center_25%]" />
 
-  <div class="grid gap-12 md:grid-cols-2">
+        <div class="absolute inset-0 bg-black/45"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent"></div>
 
-    <!-- =========================
-         ARCHIVES (BY YEAR)
-         ========================= -->
-    <div>
-      <h2 class="text-2xl font-bold mb-4">
-        Archives
-      </h2>
+        <div class="absolute inset-0 flex items-end">
+          <div class="p-6 sm:p-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white drop-shadow">
+              Browse
+            </h1>
+            <p class="mt-1 text-white/90 max-w-2xl">
+              Explore trips by activity, place, and time.
+            </p>
+          </div>
+        </div>
 
-      {{ $pages := where .Site.RegularPages "Type" "posts" }}
-      {{ $grouped := $pages.GroupByDate "2006" }}
+      </div>
+    </div>
+  </section>
 
-      <ul class="space-y-3">
-        {{ range $grouped }}
-          <li>
-            <a
-              href="/archives/#{{ .Key }}"
-              class="flex justify-between items-baseline hover:underline">
-              <span class="font-medium">
-                {{ .Key }}
-              </span>
-              <span class="text-sm text-neutral-400">
-                {{ len .Pages }}
-              </span>
-            </a>
-          </li>
-        {{ end }}
-      </ul>
+  <!-- CONTENT -->
+  <section class="mx-auto max-w-6xl px-4 py-12">
+
+    <!-- Cards (half-width on desktop, full width on mobile) -->
+    <div id="browse-cards" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Categories -->
+      <a href="/categories/"
+         class="group block overflow-hidden rounded-xl border border-neutral-300 dark:border-neutral-700">
+        <div class="relative" style="height: 200px;">
+          <img src="/img/browse_categories.png"
+               alt="Browse by category"
+               class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black/40"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent"></div>
+
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <h2 class="text-2xl font-extrabold text-white drop-shadow">Categories</h2>
+            <p class="mt-1 text-white/85 text-sm max-w-md">
+              Travel, climbing, family, nerd.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Tags -->
+      <a href="/tags/"
+         class="group block overflow-hidden rounded-xl border border-neutral-300 dark:border-neutral-700">
+        <div class="relative" style="height: 200px;">
+          <img src="/img/browse_tags.png"
+               alt="Browse by tag"
+               class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black/35"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/12 to-transparent"></div>
+
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <h2 class="text-2xl font-bold text-white drop-shadow">Tags</h2>
+            <p class="mt-1 text-white/85 text-sm max-w-md">
+              Places, gear, moments.
+            </p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Archives (span full width on desktop so it feels “base layer”) -->
+      <a href="/archives/"
+         class="group block overflow-hidden rounded-xl border border-neutral-300 dark:border-neutral-700 md:col-span-2">
+        <div class="relative" style="height: 180px;">
+          <img src="/img/browse_archives.png"
+               alt="Browse archives"
+               class="absolute inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-black/30"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent"></div>
+
+          <div class="absolute bottom-0 left-0 right-0 p-5">
+            <h2 class="text-xl font-semibold text-white drop-shadow">Archives</h2>
+            <p class="mt-1 text-white/80 text-sm max-w-2xl">
+              Browse the full timeline, year by year.
+            </p>
+          </div>
+        </div>
+      </a>
+
     </div>
 
-    <!-- =========================
-         CATEGORIES
-         ========================= -->
-    <div>
-      <h2 class="text-2xl font-bold mb-4">
-        Categories
-      </h2>
-
-      {{ $cats := .Site.Taxonomies.categories }}
-
-      <ul class="space-y-3">
-        {{ range $name, $taxonomy := $cats }}
-          <li>
-            <a
-              href="{{ $taxonomy.Page.RelPermalink }}"
-              class="flex justify-between items-baseline hover:underline">
-              <span class="capitalize font-medium">
-                {{ $name }}
-              </span>
-              <span class="text-sm text-neutral-400">
-                {{ len $taxonomy.Pages }}
-              </span>
-            </a>
-          </li>
-        {{ end }}
-      </ul>
+    <!-- Surprise Me -->
+    <div class="pt-10">
+      <a href="/surprise/"
+         class="group inline-flex items-center gap-2 rounded-lg
+                border border-neutral-300 dark:border-neutral-700
+                px-5 py-3
+                text-primary-600 dark:text-primary-400 font-semibold
+                hover:bg-neutral-50 dark:hover:bg-neutral-900 transition">
+        <span class="d20 inline-flex items-center">
+          <!-- your filled glowing d20 SVG -->
+        </span>
+        Surprise me
+      </a>
     </div>
 
-  </div>
+  </section>
 
-</section>
-
+</main>
 {{ end }}
