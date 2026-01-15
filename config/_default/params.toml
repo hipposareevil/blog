@@ -27,11 +27,10 @@ disableImageOptimizationMD = false
 disableTextInHeader = false
 backgroundImageWidth = 1200
 
-
-defaultBackgroundImage = "/img/background.jpg" # used as default for background images
-defaultFeaturedImage = "/img/default_featured.png" # used as default for featured images in all articles
+#defaultBackgroundImage = "img/background.png" # used as default for background images
+defaultFeaturedImage = "img/default_featured.png" # used as default for featured images in all articles
 hotlinkFeatureImage = false
- imagePosition = "50% 50%"
+imagePosition = "50% 50%"
 
 highlightCurrentMenuArea = true
 smartTOC = true
@@ -53,10 +52,11 @@ fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384",
   showScrollToTop = true
 
 [homepage]
-  layout = "background"  # or "page", "hero", "card", "background"
-  homepageImage = "/img/background.jpg" # used in: hero, and card
+  layout = "background"
+#  homepageImage = "img/background.png"
   showRecent = true
   showRecentItems = 10
+  showHero = true
 
 #[homepage]
 #  layout = "custom" # valid options: page, profile, hero, card, background, custom
@@ -79,7 +79,8 @@ fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384",
   showAuthor = true
   # showAuthorBottom = false
   showHero = true
-  heroStyle = "thumbAndBackground" # valid options: basic, big, background, thumbAndBackground
+#  heroStyle = "thumbAndBackground" # valid options: basic, big, background, thumbAndBackground
+  heroStyle = "basic" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = true

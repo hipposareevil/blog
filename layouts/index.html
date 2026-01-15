@@ -5,8 +5,9 @@
 {{ $p := .Paginate $pages }}
 
 <section>
-  <h2 class="mt-8 text-2xl font-extrabold mb-10">Recent</h2>
+  <h1 class="mt-8 text-4xl font-extrabold mb-10">Hippo Adventures</h1>
 
+  <h2 class="mt-8 text-2xl font-extrabold mb-10">Latest</h2>
   <section id="post-list" class="space-y-10 w-full">
     {{ range $p.Pages }}
       {{ partial "article-link/simple.html" . }}

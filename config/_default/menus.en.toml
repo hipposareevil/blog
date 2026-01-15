@@ -43,18 +43,35 @@
   weight = 29
 
 [[main]]
-  name = "Parent"
+  name = "More"
   weight = 40
   pageRef = "/"
 
+[[main]]
+  name = "Life Tracking"
+  parent = "More"
+  url = "http://willprogramforfood.com:3600/"
+  weight = 20
+  [main.params]
+    target = "_blank"
+    rel = "noopener noreferrer"
 
 [[main]]
-  name = "example sub-menu 1"
-  parent = "Parent"
-  pageRef = "posts"
-  weight = 20
-
-
+  name = "Media Tracking"
+  parent = "More"
+  url = "http://willprogramforfood.com:3000/"
+  weight = 25
+  [main.params]
+    target = "_blank"
+    rel = "noopener noreferrer"
+[[main]]
+  name = "Oscar Art"
+  parent = "More"
+  url = "http://willprogramforfood.com:3010/"
+  weight = 28
+  [main.params]
+    target = "_blank"
+    rel = "noopener noreferrer"
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before

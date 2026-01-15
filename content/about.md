@@ -1,9 +1,9 @@
 +++
 date = '2026-01-12T21:10:26+13:00'
 draft = false
-title = 'Super About'
+title = 'Ramblings'
 +++
 
-## header
-__ Something here __
+Pictures, biking, blogging, and some nerd stuff. 
+
 
