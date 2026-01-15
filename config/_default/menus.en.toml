@@ -16,10 +16,10 @@
   weight = 10
 
 
-[[main]]
-  name = "About"
-  pageRef = "/about"
-  weight = 20
+#[[main]]
+#  name = "About"
+#  pageRef = "/about"
+#  weight = 20
 
 [[main]]
   name = "Categories"
@@ -75,7 +75,7 @@
   name = "Oscar Art"
   parent = "More"
   url = "http://willprogramforfood.com:3010/"
-  weight = 28
+  weight = 10
   [main.params]
     target = "_blank"
     rel = "noopener noreferrer"
