@@ -186,3 +186,60 @@ button:hover .d20-svg {
   .browse-card--tags { height: 240px; }
   .browse-card--archives { height: 210px; }
 }
+
+
+
+
+/* ================================
+   Panoramic masonry gallery — EXTRA LARGE
+   ================================ */
+
+.pano-masonry {
+  column-gap: 1.25rem;
+  column-count: 1;              /* mobile: huge tiles */
+}
+
+/* tablet */
+@media (min-width: 640px) {
+  .pano-masonry {
+    column-count: 1;            /* still single column */
+  }
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  .pano-masonry {
+    column-count: 2;            /* big, immersive */
+  }
+}
+
+/* very wide screens */
+@media (min-width: 1440px) {
+  .pano-masonry {
+    column-count: 3;            /* optional */
+  }
+}
+
+.pano-masonry-item {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 1.25rem 0;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.12);
+}
+
+.pano-masonry-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 260ms ease;
+}
+
+.pano-masonry-item:hover .pano-masonry-img {
+  transform: scale(1.03);
+}

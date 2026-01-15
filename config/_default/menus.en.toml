@@ -43,6 +43,13 @@
   weight = 29
 
 [[main]]
+  name = "Panoramic"
+  parent = "Browse"
+  pageRef = "/panoramic"
+  weight = 30
+
+
+[[main]]
   name = "More"
   weight = 40
   pageRef = "/"

@@ -1,0 +1,27 @@
+{{/* layouts/shortcodes/pano-gallery.html
+     Panoramic masonry gallery
+     Usage: {{< pano-gallery id="gallery" >}}
+     Expects images in: <bundle>/gallery/*
+*/}}
+
+{{ $galleryId := .Get "id" | default "gallery" }}
+{{ $group := .Get "group" | default (printf "pano-%s" (.Page.File.Path | urlize)) }}
+
+<div class="pano-masonry" data-pano-masonry="{{ $galleryId }}">
+  {{ range .Page.Resources.Match (printf "%s/*" $galleryId) }}
+    <a
+      href="{{ .RelPermalink }}"
+      class="glightbox pano-masonry-item"
+      data-gallery="{{ $group }}"
+      aria-label="Open image">
+      {{/* Wider thumbs than normal posts */}}
+      {{ $thumb := .Resize "3200x" }}
+      <img
+        src="{{ $thumb.RelPermalink }}"
+        loading="lazy"
+        decoding="async"
+        class="pano-masonry-img"
+        alt="" />
+    </a>
+  {{ end }}
+</div>

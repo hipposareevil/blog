@@ -1,0 +1,113 @@
+{{ define "main" }}
+<main id="main-content" class="grow">
+
+  <!-- HERO -->
+  <section class="w-full">
+    <div class="mx-auto max-w-7xl px-4 pt-6">
+      <div class="relative overflow-hidden rounded-xl border border-neutral-300 dark:border-neutral-700"
+           style="aspect-ratio: 21 / 8; min-height: 360px;">
+
+        <img
+          src="/img/wizard_panoramic.png"
+          alt=""
+          class="absolute inset-0 h-full w-full object-cover object-[center_30%]" />
+
+        <div class="absolute inset-0 bg-black/45"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+
+        <div class="absolute inset-0 flex items-end">
+          <div class="p-6 sm:p-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white drop-shadow">
+              Panoramas
+            </h1>
+            <p class="mt-1 text-white/90 max-w-2xl">
+              Wide views
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LIST -->
+  <!-- pt adds clear gap below hero -->
+  <section class="mx-auto max-w-7xl px-4 pt-16 pb-20">
+
+    {{ $pages := .RegularPagesRecursive.ByDate.Reverse }}
+    {{ if not $pages }}
+
+      <div class="rounded-xl border border-neutral-300 dark:border-neutral-700 p-6 text-neutral-600 dark:text-neutral-300">
+        No panoramas yet.
+      </div>
+
+    {{ else }}
+
+      {{ $last := sub (len $pages) 1 }}
+
+      {{ range $i, $p := $pages }}
+        {{ $cover := "" }}
+        {{ with $p.Resources.GetMatch "feature.*" }}
+          {{ $cover = .RelPermalink }}
+        {{ end }}
+
+      {{ $photos := len ($p.Resources.Match "gallery/*") }}
+
+        <a href="{{ $p.RelPermalink }}"
+           class="group block overflow-hidden rounded-xl border border-neutral-300 dark:border-neutral-700
+                  transition-shadow hover:shadow-lg">
+
+          <div class="relative bg-neutral-200 dark:bg-neutral-800"
+               style="aspect-ratio: 21 / 9;">
+
+            {{ if $cover }}
+              <img
+                src="{{ $cover }}"
+                alt="{{ $p.Title }}"
+                loading="lazy"
+                decoding="async"
+                class="absolute inset-0 h-full w-full object-cover
+                       transition-transform duration-300
+                       group-hover:scale-[1.02]" />
+            {{ end }}
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent"></div>
+
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <h2 class="text-2xl font-extrabold text-white drop-shadow">
+                {{ $p.Title }}
+              </h2>
+
+              {{ with $p.Params.location }}
+                <p class="mt-1 text-white/85 text-sm">
+                  {{ . }}
+                </p>
+              {{ end }}
+
+
+              <p class="mt-1 text-white/80 text-sm">
+                {{ $photos }} photo{{ if ne $photos 1 }}s{{ end }}
+              </p>
+
+              <p class="mt-1 text-white/70 text-xs">
+                {{ $p.Date.Format "2 Jan 2006" }}
+              </p>
+            </div>
+
+          </div>
+
+        </a>
+
+        <!-- HARD spacer: cannot be “collapsed” by margins/gap rules -->
+        {{ if lt $i $last }}
+          <div style="height: 2rem;"></div>
+        {{ end }}
+
+      {{ end }}
+
+    {{ end }}
+
+  </section>
+
+</main>
+{{ end }}
