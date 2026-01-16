@@ -1,0 +1,42 @@
+{{/*
+bike-gallery shortcode
+Supports captions: filename;Caption text
+*/}}
+
+{{ $galleryId := .Get "id" | default "gallery" }}
+
+{{/* Build caption map: basename -> caption */}}
+{{ $captionMap := dict }}
+{{ $lines := split (trim .Inner "\n\r\t ") "\n" }}
+{{ range $lines }}
+  {{ $line := trim . "\r\t " }}
+  {{ if $line }}
+    {{ $parts := split $line ";" }}
+    {{ $fname := trim (index $parts 0) " \t\r" }}
+    {{ $base := path.Base $fname }}
+    {{ $cap := "" }}
+    {{ if gt (len $parts) 1 }}
+      {{ $cap = trim (delimit (after 1 $parts) ";") " \t\r" }}
+    {{ end }}
+    {{ if $base }}
+      {{ $captionMap = merge $captionMap (dict $base $cap) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<div class="justified-gallery" id="{{ $galleryId }}">
+  {{ range .Page.Resources.Match "gallery/*" }}
+    {{ $base := path.Base .Name }}
+    {{ $cap := index $captionMap $base | default "" }}
+
+    <a href="{{ .RelPermalink }}"
+       class="glightbox"
+       data-gallery="{{ $galleryId }}"
+       {{ if $cap }}data-description="{{ $cap | htmlEscape }}"{{ end }}>
+      {{ $thumb := .Resize "1200x" }}
+      <img
+        src="{{ $thumb.RelPermalink }}"
+        alt="{{ if $cap }}{{ $cap }}{{ else }}{{ $base }}{{ end }}">
+    </a>
+  {{ end }}
+</div>

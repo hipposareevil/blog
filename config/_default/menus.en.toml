@@ -48,6 +48,11 @@
   pageRef = "/panoramic"
   weight = 30
 
+[[main]]
+  name = "Transamerica 2001"
+  parent = "Browse"
+  pageRef = "/bike-trip"
+  weight = 35
 
 [[main]]
   name = "More"

@@ -7,50 +7,71 @@
 <section>
 
   <!-- Title -->
-  <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-center mb-2
+  <h1 class="text-4xl sm:text-4xl lg:text-6xl font-extrabold text-center mb-2
              tracking-tight
              drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]">
     Hippo Adventures
   </h1>
 
-  <!-- Panoramic callout -->
-<!-- Wand / Panoramic link -->
-<section class="py-4">
-  <div
-    class="mx-auto max-w-4xl
-           flex flex-col md:flex-row items-center gap-8
-           justify-center"
-  >
+  <!-- Featured callouts -->
+  <section class="mx-auto max-w-6xl px-4 py-10">
+    <!-- space between the two callouts -->
+    <div class="space-y-16">
 
-    <!-- Wand (hidden on small screens) -->
-      <img
-        src="/img/suit_pointing.png"
-        alt=""
-        class="md:w-5/12 max-w-md
-               pointer-events-none select-none
-               opacity-95
-               transition
-               drop-shadow-[0_0_22px_rgba(120,180,255,0.45)]
-               group-hover:drop-shadow-[0_0_34px_rgba(120,180,255,0.7)]"
-      />
-    <!-- Panoramic link -->
-    <div class="text-center md:text-left">
-      <a
-        href="/panoramic/"
-        class="inline-block
-               text-3xl sm:text-2xl font-extrabold
-               text-primary-500 dark:text-primary-400
-               hover:underline hover:underline-offset-4
-               transition"
-      >
-        ✨ Panoramic Photos
-      </a>
+      <!-- Panoramic callout -->
+      <div class="group flex flex-col md:flex-row items-center justify-center gap-16">
+        <!-- Wand (hidden on small screens) -->
+        <img
+          src="/img/suit_pointing.png"
+          alt=""
+          class="md:w-5/12 max-w-md
+                 pointer-events-none select-none opacity-95
+                 transition
+                 drop-shadow-[0_0_22px_rgba(120,180,255,0.45)]
+                 group-hover:drop-shadow-[0_0_34px_rgba(120,180,255,0.7)]" />
+
+        <!-- Link -->
+        <div class="text-center md:text-left md:pl-4" style="margin-left: 2em;">
+          <a
+            href="/panoramic/"
+            class="inline-block
+                   text-2xl sm:text-3xl font-extrabold
+                   text-primary-500 dark:text-primary-400
+                   hover:underline hover:underline-offset-4
+                   transition">
+Panoramic Photos
+          </a>
+        </div>
+      </div>
+
+      <!-- Bike Trip callout -->
+      <div class="group flex flex-col md:flex-row items-center justify-center gap-16">
+        <!-- Wheels (hidden on small screens) -->
+        <img
+          src="/img/wheels_pointing.png"
+          alt=""
+          class="md:w-5/12 max-w-md
+                 pointer-events-none select-none opacity-95
+                 transition
+                 drop-shadow-[0_0_22px_rgba(120,180,255,0.45)]
+                 group-hover:drop-shadow-[0_0_34px_rgba(120,180,255,0.7)]" />
+
+        <!-- Link -->
+        <div class="text-center md:text-left md:pl-4" style="margin-left: 2em;">
+          <a
+            href="/bike-trip/"
+            class="inline-block
+                   text-2xl sm:text-3xl font-extrabold
+                   text-primary-500 dark:text-primary-400
+                   hover:underline hover:underline-offset-4
+                   transition">
+TransAmerica Tour 2001
+          </a>
+        </div>
+      </div>
 
     </div>
-
-  </div>
-</section>
-  <!-- end panoramic callout -->
+  </section>
 
   <h2 class="mt-10 text-3xl font-extrabold mb-10">
     Latest from the blog
@@ -64,4 +85,4 @@
 
 </section>
 
-{{ end }}
+{{ end }} 
