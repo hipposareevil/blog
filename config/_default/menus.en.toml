@@ -76,6 +76,7 @@
   [main.params]
     target = "_blank"
     rel = "noopener noreferrer"
+
 [[main]]
   name = "Oscar Art"
   parent = "More"
@@ -84,6 +85,26 @@
   [main.params]
     target = "_blank"
     rel = "noopener noreferrer"
+
+
+[[main]]
+  name = "My Books"
+  parent = "More"
+  url = "http://willprogramforfood.com:8084/"
+  weight = 50
+  [main.params]
+    target = "_blank"
+    rel = "noopener noreferrer"
+
+[[main]]
+  name = "Trey's Books"
+  parent = "More"
+  url = "http://willprogramforfood.com:8083/"
+  weight = 55
+  [main.params]
+    target = "_blank"
+    rel = "noopener noreferrer"
+
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
