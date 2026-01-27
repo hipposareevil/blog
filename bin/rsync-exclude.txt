@@ -1,0 +1,11 @@
+bike-trip/
+cache/
+*.log
+panoramic/
+posts/200*
+posts/201*
+posts/2020*
+posts/2021*
+posts/2022*
+posts/2023*
+posts/2024*
