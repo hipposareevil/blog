@@ -60,9 +60,18 @@
   pageRef = "/"
 
 [[main]]
+  name = "Mobile Photos"
+  parent = "More"
+  url = "https://mobile.willprogramforfood.com/"
+  weight = 10
+  [main.params]
+    target = "_blank"
+    rel = "noopener noreferrer"
+
+[[main]]
   name = "Life Tracking"
   parent = "More"
-  url = "http://willprogramforfood.com:3600/"
+  url = "https://training.willprogramforfood.com/"
   weight = 20
   [main.params]
     target = "_blank"
@@ -71,7 +80,7 @@
 [[main]]
   name = "Media Tracking"
   parent = "More"
-  url = "http://willprogramforfood.com:3000/"
+  url = "https://reviews.willprogramforfood.com/"
   weight = 25
   [main.params]
     target = "_blank"
@@ -80,7 +89,7 @@
 [[main]]
   name = "Oscar Art"
   parent = "More"
-  url = "http://willprogramforfood.com:3010/"
+  url = "https://oscar.willprogramforfood.com/"
   weight = 10
   [main.params]
     target = "_blank"
