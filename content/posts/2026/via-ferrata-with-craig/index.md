@@ -9,7 +9,7 @@ featured = false
 summary = ""
 +++
 
-Via Ferrata with Craig.  They have 2 course now at [Takaka Hill](https://viaferrata.org.nz/).  Super dope.
+Via Ferrata with Craig.  They have 2 courses now at [Takaka Hill](https://viaferrata.org.nz/).  Super dope.
 
 {{< gallery id="gallery" >}}
 
