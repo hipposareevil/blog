@@ -5,7 +5,7 @@ set -euo pipefail
 # Source: /Users/sami/git/blog_image_backups
 # Targets: content/posts/**/gallery/** and content/posts/**/feature.*
 
-SRC="/Users/sami/git/blog_image_backups"
+SRC="/Users/sami/blog_image_backups"
 DEST="$(pwd)"
 
 if [[ ! -d "$SRC/content/posts" ]]; then
