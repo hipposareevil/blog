@@ -1,6 +1,6 @@
 +++
 title = "Hapuku Kitchen outdoor class"
-date = "2026-01-05-01T17:35:08+13:00"
+date = "2026-01-06T17:35:08+13:00"
 draft = false
 tags = ["cooking"]
 categories = ["travel"]
