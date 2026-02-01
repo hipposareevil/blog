@@ -77,9 +77,6 @@ move_gallery_images() {
     mv -v "$f" "$GALLERY_DIR/"
   done
 
-  # If ./pics is now empty, remove it (optional nicety).
-  rmdir "$pics" 2>/dev/null || true
-
   # Pick the first image in the gallery (sorted by name) as the feature source.
   local first
   first="$(ls -1 "$GALLERY_DIR" 2>/dev/null | sort | head -n 1 || true)"
@@ -133,6 +130,8 @@ cat > "$INDEX_FILE" <<EOF
 title = "$TITLE"
 date = "$NOW_ISO"
 draft = false
+tags = []
+categories = []
 
 featured = false
 summary = ""
