@@ -4,4 +4,4 @@ rsync -av --prune-empty-dirs \
   --include='content/posts/**/gallery/***' \
   --include='content/posts/**/feature.*' \
   --exclude='*' \
-  ./   /Users/sami/git/blog_image_backups
+  ./   /Users/sami/blog_image_backups

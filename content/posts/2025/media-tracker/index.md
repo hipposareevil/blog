@@ -12,4 +12,4 @@ Three hours later I had a very usable web page that I could pull from github and
 
 To make something like this by hand would probably take 4 weeks and I had it here up in hours. Glad I got out of programming when I did.
 
-[My Media Tracker](http://willprogramforfood.com:3000/)
+[My Media Tracker](https://reviews.willprogramforfood.com/)

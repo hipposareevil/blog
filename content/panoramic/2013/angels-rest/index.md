@@ -2,7 +2,7 @@
 title = "Angels Rest"
 date = "2013-12-22T00:00:00+13:00"
 draft = false
-tags = ["columbiagorge"]
+tags = ["columbia-gorge"]
 categories = ["panoramic"]
 summary = "## Angels Rest"
 +++

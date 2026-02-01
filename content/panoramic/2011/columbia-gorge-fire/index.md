@@ -2,7 +2,7 @@
 title = "Columbia Gorge Fire"
 date = "2011-08-29T00:00:00+13:00"
 draft = false
-tags = ["columbiagorge"]
+tags = ["columbia-gorge"]
 categories = ["panoramic"]
 summary = "## Fire in the Gorge."
 +++

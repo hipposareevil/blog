@@ -2,7 +2,7 @@
 title = "Columbia Gorge by Moto"
 date = "2011-04-18T00:00:00+13:00"
 draft = false
-tags = ["moto", "columbiagorge"]
+tags = ["moto", "columbia-gorge"]
 categories = ["travel"]
 summary = "## Columbia River Gorge"
 +++

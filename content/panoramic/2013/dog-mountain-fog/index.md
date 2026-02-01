@@ -2,7 +2,7 @@
 title = "Dog Mountain Fog"
 date = "2013-12-29T00:00:00+13:00"
 draft = false
-tags = ["hiking", "columbiagorge"]
+tags = ["hiking", "columbia-gorge"]
 categories = ["travel"]
 summary = "## Dog Mountain"
 +++

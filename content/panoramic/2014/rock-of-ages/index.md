@@ -2,7 +2,7 @@
 title = "Rock of Ages"
 date = "2014-07-06T00:00:00+13:00"
 draft = false
-tags = ["hiking", "columbiagorge"]
+tags = ["hiking", "columbia-gorge"]
 categories = ["travel"]
 summary = "## Rock of Ages Steep hike in the Gorge."
 +++
