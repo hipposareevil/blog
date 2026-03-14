@@ -27,6 +27,51 @@ slugify() {
     | sed -E 's/[[:space:]]+/-/g; s/[^a-z0-9-]//g; s/-+/-/g; s/^-|-$//g'
 }
 
+# --- Image Conversion Subroutine ---
+
+convert_to_jpg() {
+  local src="$1"
+  local dest="$2"
+
+  if command -v heif-convert >/dev/null 2>&1; then
+    heif-convert "$src" "$dest" >/dev/null 2>&1 && return 0
+  elif command -v magick >/dev/null 2>&1; then
+    magick "$src" "$dest" >/dev/null 2>&1 && return 0
+  elif command -v convert >/dev/null 2>&1; then
+    convert "$src" "$dest" >/dev/null 2>&1 && return 0
+  elif command -v ffmpeg >/dev/null 2>&1; then
+    ffmpeg -y -i "$src" "$dest" >/dev/null 2>&1 && return 0
+  fi
+
+  return 1
+}
+
+copy_image() {
+  local src="$1"
+  local dest_dir="$2"
+
+  local filename
+  filename="$(basename "$src")"
+  local ext="${filename##*.}"
+  ext="${ext,,}"
+
+  if [[ "$ext" == "heic" ]]; then
+    local newname="${filename%.*}.jpg"
+    local dest="$dest_dir/$newname"
+
+    echo "Converting HEIC -> JPG: $filename"
+    if convert_to_jpg "$src" "$dest"; then
+      rm -f "$src"
+    else
+      echo "WARN: Conversion failed, copying original HEIC."
+      cp -v "$src" "$dest_dir/"
+      rm -f "$src"
+    fi
+  else
+    mv -v "$src" "$dest_dir/"
+  fi
+}
+
 if [[ -z "$SLUG" ]]; then
   SLUG="$(slugify "$TITLE")"
 fi
@@ -54,7 +99,6 @@ INDEX_FILE="$DEST_DIR/index.md"
 GALLERY_DIR="$DEST_DIR/gallery"
 FEATURE_PATH="$DEST_DIR/feature.jpg"
 
-# If a ./pics directory exists where the script is invoked, we'll move images into the new gallery.
 PICS_DIR="$INVOKE_DIR/pics"
 
 move_gallery_images() {
@@ -62,60 +106,25 @@ move_gallery_images() {
 
   [[ -d "$pics" ]] || return 0
 
-  # Collect candidate images (case-insensitive): jpg/jpeg/heic
   mapfile -t imgs < <(find "$pics" -maxdepth 1 -type f \( \
       -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.heic' \
     \) -print | sort)
 
   if [[ ${#imgs[@]} -eq 0 ]]; then
-    echo "No images found in: $pics (expected .jpg/.jpeg/.heic)"
+    echo "No images found in: $pics"
     return 0
   fi
 
-  echo "Moving ${#imgs[@]} image(s) from $pics -> $GALLERY_DIR"
+  echo "Processing ${#imgs[@]} image(s) from $pics -> $GALLERY_DIR"
+
   for f in "${imgs[@]}"; do
-    mv -v "$f" "$GALLERY_DIR/"
+    copy_image "$f" "$GALLERY_DIR"
   done
 
-  # Pick the first image in the gallery (sorted by name) as the feature source.
+  # Set first image as feature
   local first
   first="$(ls -1 "$GALLERY_DIR" 2>/dev/null | sort | head -n 1 || true)"
-  if [[ -z "$first" ]]; then
-    return 0
-  fi
-
-  local src="$GALLERY_DIR/$first"
-  local ext="${first##*.}"
-  ext="${ext,,}"
-
-  if [[ "$ext" == "jpg" || "$ext" == "jpeg" ]]; then
-    cp -v "$src" "$FEATURE_PATH"
-    return 0
-  fi
-
-  if [[ "$ext" == "heic" ]]; then
-    echo "First image is HEIC; attempting to convert -> $FEATURE_PATH"
-    if command -v heif-convert >/dev/null 2>&1; then
-      heif-convert "$src" "$FEATURE_PATH" >/dev/null || true
-    elif command -v magick >/dev/null 2>&1; then
-      magick "$src" "$FEATURE_PATH" || true
-    elif command -v convert >/dev/null 2>&1; then
-      convert "$src" "$FEATURE_PATH" || true
-    elif command -v ffmpeg >/dev/null 2>&1; then
-      ffmpeg -y -i "$src" "$FEATURE_PATH" >/dev/null 2>&1 || true
-    else
-      echo "WARN: No HEIC converter found (heif-convert/magick/convert/ffmpeg)."
-      echo "      Copying as: $DEST_DIR/feature.heic"
-      cp -v "$src" "$DEST_DIR/feature.heic"
-    fi
-
-    # If conversion failed for any reason, fall back to feature.heic.
-    if [[ ! -s "$FEATURE_PATH" ]]; then
-      echo "WARN: HEIC->JPG conversion did not produce $FEATURE_PATH"
-      echo "      Copying as: $DEST_DIR/feature.heic"
-      cp -v "$src" "$DEST_DIR/feature.heic"
-    fi
-  fi
+  [[ -n "$first" ]] && cp -v "$GALLERY_DIR/$first" "$FEATURE_PATH"
 }
 
 mkdir -p "$GALLERY_DIR"
@@ -144,6 +153,7 @@ EOF
 echo "Created:"
 echo "  $INDEX_FILE"
 echo "  $GALLERY_DIR"
+
 move_gallery_images "$PICS_DIR"
 
 if [[ -s "$FEATURE_PATH" ]]; then
@@ -152,5 +162,4 @@ else
   echo "Tip: add feature image at: $FEATURE_PATH"
 fi
 
-# Open in Emacs
 emacs "$INDEX_FILE" >/dev/null 2>&1 &
