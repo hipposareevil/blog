@@ -1,5 +1,5 @@
 +++
-title = "Wheatbix Trialthalon"
+title = "Weet-Bix Trialthalon"
 date = "2025-03-09"
 draft = false
 tags = ["travel"]

@@ -20,3 +20,4 @@ content/panoramic/**/feature.*
 # bike photos (keep locally, not in git)
 content/bike-trip/**/gallery/**
 content/bike-trip/**/feature.*
+pics
