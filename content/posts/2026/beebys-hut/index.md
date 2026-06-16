@@ -2,7 +2,7 @@
 title = "Beeby's Hut"
 date = "2026-01-31T20:04:07+13:00"
 draft = false
-tags = ["hike"]
+tags = ["hiking"]
 categories = ["outdoors"]
 
 featured = false

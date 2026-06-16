@@ -2,7 +2,7 @@
 title = "Tirohanga Hike"
 date = "2026-04-26T14:22:46+12:00"
 draft = false
-tags = ["hike"]
+tags = ["hiking"]
 categories = ["outdoors"]
 
 featured = false

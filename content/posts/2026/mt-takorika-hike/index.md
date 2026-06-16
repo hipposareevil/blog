@@ -2,7 +2,7 @@
 title = "Mt. Takorika hike"
 date = "2026-04-19T14:18:08+12:00"
 draft = false
-tags = ["hike"]
+tags = ["hiking"]
 categories = ["outdoors"]
 
 featured = false
