@@ -41,6 +41,13 @@ smartTOCHideUnfocusedChildren = false
 
 fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384", "sha256"
 
+[gpxmap]
+  maptilerKey         = "DSdF85giIH5Jkcc46q7r "
+  defaultStyle        = "outdoor-v2"   # outdoor-v2 | topo-v2 | satellite
+  terrainExaggeration = 1.5            # try 1.2–2.0
+
+
+
 [header]
   layout = "fixed" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
 
