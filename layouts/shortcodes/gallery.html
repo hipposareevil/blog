@@ -3,7 +3,7 @@
   {{ range .Page.Resources.Match (printf "%s/*" $galleryId) }}
     <a href="{{ .RelPermalink }}" class="glightbox" data-gallery="{{ $galleryId }}">
       {{ $thumb := .Resize "800x" }}
-      <img src="{{ $thumb.RelPermalink }}" alt="{{ .Name }}">
+      <img src="{{ $thumb.RelPermalink }}" alt="{{ .Name }}" class="nozoom" >
     </a>
   {{ end }}
 </div>

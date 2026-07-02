@@ -8,28 +8,29 @@
            window.innerWidth >= 640  ? 280 : 220;
   }
 
-  function initGallery() {
-    const $g = $(".justified-gallery");
-    if (!$g.length) return;
-
-    // Re-init safely if needed
-    if ($g.data("jg.initialized")) {
-      $g.justifiedGallery("destroy");
+function initGallery() {
+  const els = document.querySelectorAll(".justified-gallery");
+  if (!els.length) return;
+  els.forEach(function(el) {
+    const $el = jQuery(el);
+    if ($el.data("jg.initialized")) {
+      $el.justifiedGallery("destroy");
     }
-
-    $g.justifiedGallery({
+    $el.justifiedGallery({
       rowHeight: galleryRowHeight(),
       margins: 8,
       lastRow: "nojustify"
     });
-  }
+  });
+}
+
 
   window.addEventListener("load", function () {
     initGallery();
 
     // Lightbox only if there are any matching links
     if (document.querySelector(".glightbox")) {
-      GLightbox({ selector: ".glightbox", touchNavigation: true, loop: true });
+      new GLightbox({ selector: ".glightbox", touchNavigation: true, loop: true });
     }
   });
 
