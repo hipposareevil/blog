@@ -144,6 +144,14 @@
 <canvas id="{{ $mapId }}-elev" height="80"
   style="width:100%; margin-top:-8px; border-radius:0 0 8px 8px; background:var(--bg-color, #111);"></canvas>
 
+{{/* Mountain silhouette divider */}}
+<div style="text-align:center; margin: 0.5rem 0 1.5rem; opacity:0.35; line-height:1;">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 40" width="100%" height="40" preserveAspectRatio="none">
+    <path d="M0 40 L0 28 L30 12 L55 24 L90 4 L120 20 L150 8 L175 22 L200 2 L225 18 L255 6 L285 22 L310 10 L340 26 L370 8 L400 20 L400 40 Z"
+          fill="currentColor"/>
+  </svg>
+</div>
+
   </div>{{/* end #-full */}}
 </div>{{/* end #-shell */}}
 
@@ -851,6 +859,8 @@
       resetNorth() {
         map.easeTo({ bearing: 0, pitch: 0, duration: 500 });
       },
+      expand:   expandMap,
+      collapse: collapseMap,
     };
     } // end initFullMap
 
