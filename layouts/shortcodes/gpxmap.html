@@ -156,8 +156,8 @@
 </div>{{/* end #-shell */}}
 
 {{/* Load MapLibre once per page */}}
-{{ if not (.Page.Scratch.Get "maplibre-loaded") }}
-  {{ .Page.Scratch.Set "maplibre-loaded" true }}
+{{ if not (.Page.Store.Get "maplibre-loaded") }}
+  {{ .Page.Store.Set "maplibre-loaded" true }}
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
   <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
   <script>
@@ -609,7 +609,10 @@
 
       map.addSource("track", {
         type: "geojson",
-        data: { type: "FeatureCollection", features: segFeatures },
+        data: {
+          type: "Feature",
+          geometry: { type: "LineString", coordinates: track.coord },
+        },
       });
       map.addLayer({
         id:   "track-line",
@@ -617,8 +620,13 @@
         source: "track",
         layout: { "line-join": "round", "line-cap": "round" },
         paint:  {
-          "line-color": "#888888",
-          "line-width": 4,
+          "line-color": "#e05c2a",
+          "line-width": ["interpolate", ["linear"], ["zoom"],
+            6, 3,
+            9, 5,
+            12, 4,
+            15, 3,
+          ],
           "line-opacity": 0.5,
         },
       });
@@ -635,7 +643,12 @@
         layout: { "line-join": "round", "line-cap": "round" },
         paint:  {
           "line-color": ["get", "color"],
-          "line-width": 7,
+          "line-width": ["interpolate", ["linear"], ["zoom"],
+            6, 4,
+            9, 7,
+            12, 6,
+            15, 5,
+          ],
           "line-opacity": 1.0,
         },
       });

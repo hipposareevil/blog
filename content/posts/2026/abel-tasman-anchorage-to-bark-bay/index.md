@@ -2,7 +2,7 @@
 title = "Abel Tasman: Anchorage to Bark Bay"
 date = "2026-04-06T20:02:55+12:00"
 draft = false
-tags = ["hiking", "abel.tasman"]
+tags = ["hiking", "abel.tasman", "gpx"]
 categories = ["outdoors"]
 
 featured = false
@@ -16,6 +16,8 @@ Walked through Torrent Bay, which has a handful of old and new cabins, and up th
 Bark Bay Hut had two huge rooms for beds. We were first there and got sweet spots.
 
 We went to the bay and played in the water for the afternoon. Oscar and Rachel got right next to a ray. The water was pretty nice and it was super sunny out. 
+
+{{< gpxmap >}}
 
 {{< gallery id="gallery" >}}
 

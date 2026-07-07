@@ -2,7 +2,7 @@
 title = "Abel Tasman: Marahau to Anchorage"
 date = "2026-04-05T15:06:04+12:00"
 draft = false
-tags = ["hiking", "abel.tasman"]
+tags = ["hiking", "abel.tasman", "gpx"]
 categories = ["outdoors"]
 
 featured = false
@@ -14,6 +14,8 @@ We started the [Abel Tasman Great Walk](https://www.doc.govt.nz/parks-and-recrea
 Oscar shot off on the first part of the tramp through the marsh and into the forest. We stopped a few times to play in the sand and eat. We picked our packs up from a DOC sign and schlepped them to the hut.
 
 The Anchorage hut was quite large and we got a room with another family. Oscar had fun playing in the sand and playing cards in the common room.
+
+{{< gpxmap >}}
 
 {{< gallery id="gallery" >}}
 
