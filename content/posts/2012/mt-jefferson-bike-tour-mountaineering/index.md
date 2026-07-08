@@ -2,7 +2,7 @@
 title = "Mt. Jefferson bike tour mountaineering"
 date = "2012-07-23"
 draft = false
-tags = ["climbing", "oregon", "biking", "mountaineering"]
+tags = ["climbing", "oregon", "biking", "mountaineering", "gpx"]
 categories = ["climbing"]
 summary = "Approach"
 +++
@@ -41,7 +41,9 @@ After the initial climb from Hades, the majority of our ride home was slightly d
 
 Once we hit the Springwater Corridor, Terry bought a can of beer for us to share, which anesthetized some of our pains.
 
+## Map
 
-<h2>Panoramic Photos</h2>
-<a href="http://willprogramforfood.com/photos/mt-jefferson-climb"><img alt=""   src="http://willprogramforfood.com/photos/pics/panoramic/2012/jefferson/thumb/jeffersonPano.jpg" class="photo"></a>
+{{< gpxmap >}}
+
+## Photos
 {{< gallery id="gallery" >}}

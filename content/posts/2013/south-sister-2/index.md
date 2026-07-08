@@ -2,7 +2,7 @@
 title = "South Sister Ski"
 date = "2013-05-01"
 draft = false
-tags = ["climbing", "oregon", "southsister", "mountaineering"]
+tags = ["climbing", "oregon", "southsister", "mountaineering", "gpx"]
 categories = ["climbing"]
 summary = "Ski in"
 +++
@@ -26,8 +26,10 @@ After skiing the flats towards the trailhead it was mainly by hoof until I was i
 <h2>Panoramic Photos</h2>
 <a href="http://willprogramforfood.com/photos/south-sister-ski-summit"><img class="photo"   src="http://willprogramforfood.com/photos/pics/panoramic/2013/southSisterPano/thumb/southSisterPano_12.jpg" alt="" />
 
+## Map
 
+{{< gpxmap >}}
 
-<h2>Photos</h2>
+## Photos
 
 {{< gallery id="gallery" >}}

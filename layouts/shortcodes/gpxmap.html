@@ -75,38 +75,38 @@
              background:transparent; color:inherit; font-family:monospace;">
       km / mi
     </button>
-    <button onclick="gpxmaps['{{ $mapId }}'].collapse()"
-      style="padding:2px 8px; font-size:0.75rem; border-radius:4px;
-             border:1px solid rgba(255,255,255,0.3); cursor:pointer;
-             background:transparent; color:inherit; font-family:monospace;">
-      ↙ collapse
-    </button>
   </div>
 
   {{/* Style toggles — top right */}}
-  <div style="position:absolute; top:10px; right:10px; z-index:10; display:flex; gap:6px; align-items:center;">
-    <select id="{{ $mapId }}-speed" title="Flythrough speed"
-      style="padding:3px 5px; font-size:0.75rem; border-radius:4px; border:none; cursor:pointer; background:#fff; opacity:0.9;">
-      <option value="0.5">0.5×</option>
-      <option value="1" selected>1×</option>
-      <option value="2">2×</option>
-      <option value="4">4×</option>
-    </select>
-    <button id="{{ $mapId }}-playbtn" onclick="gpxmaps['{{ $mapId }}'].togglePlay()"
-      style="padding:4px 10px; font-size:0.75rem; border-radius:4px; border:none; cursor:pointer; background:#fff; opacity:0.9;">
-      ▶ Fly
-    </button>
-    <button onclick="gpxmaps['{{ $mapId }}'].setStyle('outdoor')"
-      style="padding:4px 8px; font-size:0.75rem; border-radius:4px; border:none; cursor:pointer; background:#fff; opacity:0.9;">
-      Topo
-    </button>
-    <button onclick="gpxmaps['{{ $mapId }}'].setStyle('satellite')"
-      style="padding:4px 8px; font-size:0.75rem; border-radius:4px; border:none; cursor:pointer; background:#fff; opacity:0.9;">
-      Satellite
-    </button>
-    <button id="{{ $mapId }}-3dbtn" onclick="gpxmaps['{{ $mapId }}'].toggleTerrain()"
-      style="padding:4px 8px; font-size:0.75rem; border-radius:4px; border:none; cursor:pointer; background:#fff; opacity:0.9;">
-      3D ⛰
+  <div style="position:absolute; top:10px; right:10px; z-index:10; display:flex; flex-direction:column; gap:6px; align-items:flex-end;">
+    <div style="display:flex; gap:6px; align-items:center;">
+      <select id="{{ $mapId }}-speed" title="Flythrough speed"
+        style="padding:3px 5px; font-size:0.75rem; border-radius:4px; border:none; cursor:pointer; background:#fff; opacity:0.9;">
+        <option value="0.5">0.5×</option>
+        <option value="1" selected>1×</option>
+        <option value="2">2×</option>
+        <option value="4">4×</option>
+      </select>
+      <button id="{{ $mapId }}-playbtn" onclick="gpxmaps['{{ $mapId }}'].togglePlay()"
+        style="padding:4px 10px; font-size:0.75rem; border-radius:4px; border:none; cursor:pointer; background:#fff; opacity:0.9;">
+        ▶ Fly
+      </button>
+      <button onclick="gpxmaps['{{ $mapId }}'].setStyle('outdoor')"
+        style="padding:4px 8px; font-size:0.75rem; border-radius:4px; border:none; cursor:pointer; background:#fff; opacity:0.9;">
+        Topo
+      </button>
+      <button onclick="gpxmaps['{{ $mapId }}'].setStyle('satellite')"
+        style="padding:4px 8px; font-size:0.75rem; border-radius:4px; border:none; cursor:pointer; background:#fff; opacity:0.9;">
+        Satellite
+      </button>
+      <button id="{{ $mapId }}-3dbtn" onclick="gpxmaps['{{ $mapId }}'].toggleTerrain()"
+        style="padding:4px 8px; font-size:0.75rem; border-radius:4px; border:none; cursor:pointer; background:#fff; opacity:0.9;">
+        3D ⛰
+      </button>
+    </div>
+    <button id="{{ $mapId }}-sizebtn" onclick="gpxmaps['{{ $mapId }}'].cycleSize()"
+      style="padding:2px 8px; font-size:0.75rem; border-radius:4px; border:none; cursor:pointer; background:rgba(255,255,255,0.9); opacity:0.9; font-family:monospace;">
+      ↙ SM
     </button>
   </div>
 
@@ -874,13 +874,38 @@
       },
       expand:   expandMap,
       collapse: collapseMap,
+      cycleSize() {
+        const mapEl  = document.getElementById(MAP_ID);
+        const btn    = document.getElementById(MAP_ID + "-sizebtn");
+        const sizes  = [
+          { label: "↙ SM",  action: "collapse" },
+          { label: "▭ MD",  height: "500px" },
+          { label: "▬ LG",  height: "800px" },
+        ];
+        // Determine current state
+        const fullEl = document.getElementById(MAP_ID + "-full");
+        const isCollapsed = fullEl.style.display === "none";
+        let current = isCollapsed ? 0
+          : mapEl.style.height === "800px" ? 2 : 1;
+        const next = (current + 1) % sizes.length;
+        const s = sizes[next];
+        if (s.action === "collapse") {
+          collapseMap();
+        } else {
+          if (isCollapsed) expandMap();
+          mapEl.style.height = s.height;
+          map.resize();
+        }
+        if (btn) btn.textContent = sizes[(next + 1) % sizes.length].label;
+      },
     };
     } // end initFullMap
 
     // Expose expand/collapse at init time (before full map loads)
     window.gpxmaps[MAP_ID] = {
-      expand:   expandMap,
-      collapse: collapseMap,
+      expand:     expandMap,
+      collapse:   collapseMap,
+      cycleSize() { if (fullMapInited) window.gpxmaps[MAP_ID].cycleSize(); else expandMap(); },
       // All other methods delegated once full map inits (via initFullMap overwriting this)
       togglePlay()  { if (fullMapInited) window.gpxmaps[MAP_ID].togglePlay();  },
       setStyle(n)   { if (fullMapInited) window.gpxmaps[MAP_ID].setStyle(n);   },

@@ -2,7 +2,7 @@
 title = "Mt Aspiring"
 date = "2023-12-15"
 draft = false
-tags = ["climbing", "mountaineering"]
+tags = ["climbing", "mountaineering", "gpx"]
 categories = ["climbing"]
 summary = "I went down to Wanaka to do a guided climb of Mt. Aspiring."
 +++
@@ -14,4 +14,8 @@ After dumping our gear in the hut and claiming a few berths we headed up the rou
 We went back to the hut and lazed around and ate dinner while climbers streamed in to get bunks. The Kea birds were in full form and hunted around for anything left lying around - they sound like cats. In the morning after little sleep we geared up and headed back across the glacier for a flight out. We went from freezing weather in parkas to being on the valley floor in the heat in about 5 minutes.
 
 I got more Nutella crepes.
+
+
+{{< gpxmap >}}
+
 {{< gallery id="gallery" >}}
