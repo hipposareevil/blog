@@ -3,7 +3,7 @@ title = "Red Rocks Climbing"
 date = "2007-04-09"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Ron and I went down to Red Rocks in Las Vegas to do some climbing and to hang out with Jami for her birthday. We had a good time not losing all of our money, making fun of the other people at Circus Circus and getting in…"
 +++
 

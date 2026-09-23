@@ -3,7 +3,7 @@ title = "Ingalls with Dan and Dawn"
 date = "2019-09-05"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Climbed Ingalls East route with Dan and then the South route with Dan and Dawn. Epic."
 +++
 

@@ -3,7 +3,7 @@ title = "Illumination Rock Camping"
 date = "2012-05-30"
 draft = false
 tags = ["climbing", "mt-hood", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "I left work early to hike up to Illumination Rock and get in some photos and camping. I lucked out with great weather and views."
 +++
 

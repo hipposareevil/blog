@@ -3,7 +3,7 @@ title = "Hood with Mat"
 date = "2014-06-03"
 draft = false
 tags = ["climbing", "oregon", "mt-hood", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Mat and I attempted Hood and fully expected to crush it. I think Wy'east heard our bravado and slapped us down pretty hard."
 +++
 

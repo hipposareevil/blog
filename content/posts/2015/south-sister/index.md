@@ -3,7 +3,7 @@ title = "South Sister with Mat"
 date = "2015-01-24"
 draft = false
 tags = ["climbing", "oregon", "southsister", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Attempt -------"
 +++
 

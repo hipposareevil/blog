@@ -3,7 +3,7 @@ title = "Mt. Adams with Chris"
 date = "2014-08-09"
 draft = false
 tags = ["climbing", "washington", "mt-adams", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Climb"
 +++
 

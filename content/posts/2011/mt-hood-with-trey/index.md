@@ -3,7 +3,7 @@ title = "Mt. Hood with Trey"
 date = "2011-06-10"
 draft = false
 tags = ["climbing", "mt-hood", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Ascent -------"
 +++
 

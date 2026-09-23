@@ -3,7 +3,7 @@ title = "Mt. Hood Solo Climb"
 date = "2013-06-02"
 draft = false
 tags = ["climbing", "oregon", "mt-hood", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "The way up felt fairly slow and I got off track a few times with all of the snowcat trails zig zagging. I didn't break any records getting to the top of the palmer but from there to the Hogsback went really fast."
 +++
 

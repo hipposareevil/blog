@@ -3,7 +3,7 @@ title = "Memorial Day Climbing"
 date = "2006-05-29"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Over Memorial Day a bunch of us went down to Bend to do climbing at Smith Rocks and biking at Phil's Trail and the Whoo-De-Doos. As usual it was kick ass."
 +++
 

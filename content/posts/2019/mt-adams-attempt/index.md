@@ -3,7 +3,7 @@ title = "Mt. Adams Attempt"
 date = "2019-07-16"
 draft = false
 tags = ["climbing", "mt-adams", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Went up Mt. Adams with Trey while Dad managed basecamp."
 +++
 

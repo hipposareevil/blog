@@ -3,7 +3,7 @@ title = "Breaking stuff at rock gym"
 date = "2004-02-06"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Last night I was at the rock gym getting in a climb on a 5.7. Two thirds of the way up the route I was standing up on my right leg when the hold shattered and flew to the ground."
 +++
 

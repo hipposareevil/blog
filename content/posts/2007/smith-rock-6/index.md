@@ -3,7 +3,7 @@ title = "Smith Rock with Vince"
 date = "2007-06-24"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Over the weekend Ron and I went over to Smith to try and help out Vince's Boy Scout troop do some climbing. We set up a few top ropes over by Cinammon Slab."
 +++
 

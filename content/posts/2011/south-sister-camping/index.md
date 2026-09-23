@@ -3,7 +3,7 @@ title = "South Sister camping"
 date = "2011-06-27"
 draft = false
 tags = ["climbing", "southsister", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Ascent ------"
 +++
 

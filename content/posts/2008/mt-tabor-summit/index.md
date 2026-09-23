@@ -3,7 +3,7 @@ title = "Mt. Tabor Summit"
 date = "2008-12-22"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Mt. Tabor finally got enough snow for Matt, Keevin and I to make a West face summit attempt."
 +++
 

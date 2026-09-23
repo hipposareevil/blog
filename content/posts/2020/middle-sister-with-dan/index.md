@@ -3,7 +3,7 @@ title = "Middle Sister With Dan"
 date = "2020-05-09"
 draft = false
 tags = ["climbing", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "It's not Mt. Shasta, but Dan and I made a run for Middle Sister over the weekend."
 +++
 

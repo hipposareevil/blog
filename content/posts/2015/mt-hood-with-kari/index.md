@@ -3,7 +3,7 @@ title = "Mt. Hood, almost"
 date = "2015-01-31"
 draft = false
 tags = ["climbing", "oregon", "mt-hood", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Climb"
 +++
 

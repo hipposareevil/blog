@@ -3,7 +3,7 @@ title = "Mt. Adams South Side with Dan"
 date = "2010-08-17"
 draft = false
 tags = ["climbing", "mt-adams", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Dan and I climbed the South Side route of Mt. Adams."
 +++
 

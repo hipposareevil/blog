@@ -3,7 +3,7 @@ title = "Workout"
 date = "2009-01-22"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "I'm reading about strength building in Extreme Alpinism by Mark Twight. His book says (if I read it right) that you need to get warmed up and then do 6 sets of 2 reps of your almost max."
 +++
 

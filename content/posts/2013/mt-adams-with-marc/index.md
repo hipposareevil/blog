@@ -3,7 +3,7 @@ title = "Mt. Adams with Marc"
 date = "2013-07-08"
 draft = false
 tags = ["climbing", "washington", "mt-adams", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Up -----"
 +++
 

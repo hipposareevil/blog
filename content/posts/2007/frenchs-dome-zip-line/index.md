@@ -3,7 +3,7 @@ title = "French's Dome zip line"
 date = "2007-05-20"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "On Saturday I went up to French's Dome with Keevin and Matt. We did a few climbs and it was pretty good."
 +++
 

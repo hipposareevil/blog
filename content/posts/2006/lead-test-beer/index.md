@@ -3,7 +3,7 @@ title = "Lead Test == Beer"
 date = "2006-01-20"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "On Tuesday I took my lead test, again. This time they were kind enough to pass me."
 +++
 

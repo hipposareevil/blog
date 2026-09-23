@@ -3,7 +3,7 @@ title = "Mt. Jefferson bike tour mountaineering"
 date = "2012-07-23"
 draft = false
 tags = ["climbing", "oregon", "biking", "mountaineering", "gpx"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Approach"
 +++
 

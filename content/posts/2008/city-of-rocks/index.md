@@ -3,7 +3,7 @@ title = "City of Rocks First Trip"
 date = "2008-09-01"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "For the long weekend we (Ingrid, me, Ron, Angel, Dan Little, Cyndi and her dude) went over to City of Rocks in Idaho. The weather was perfect with low 80s and light winds."
 +++
 

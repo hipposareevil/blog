@@ -3,7 +3,7 @@ title = "Mt. Hood attempt with Keevin"
 date = "2013-06-12"
 draft = false
 tags = ["climbing", "oregon", "mt-hood", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Keevin was back in town and had a few days before he had to work so I suggested we get in a Mt. Hood climb."
 +++
 

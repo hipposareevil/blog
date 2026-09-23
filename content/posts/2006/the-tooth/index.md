@@ -3,7 +3,7 @@ title = "The Tooth"
 date = "2006-10-10"
 draft = false
 tags = ["climbing", "washington"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Esther, Dan, Keevin, Matt and I went up to The Tooth in Washington over the weekend for our last alpine climb of the year. It was pretty dope."
 +++
 

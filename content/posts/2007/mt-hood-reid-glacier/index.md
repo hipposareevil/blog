@@ -3,7 +3,7 @@ title = "Mt. Hood Reid Glacier"
 date = "2007-06-01"
 draft = false
 tags = ["climbing", "mt-hood", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Keevin, Matt and I went up on Hood to do the Luthold Couloir. We made awesome time to the top of the Palmer lift and then headed over towards Illumination Rock."
 +++
 

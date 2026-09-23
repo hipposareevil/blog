@@ -3,7 +3,7 @@ title = "Mt. Hood Old Chute"
 date = "2010-04-18"
 draft = false
 tags = ["climbing", "mt-hood", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "I took Ingrid up the south side of Mt. Hood on Sunday morning via the Old Chute route."
 +++
 

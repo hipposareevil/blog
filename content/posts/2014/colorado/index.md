@@ -3,7 +3,7 @@ title = "Colorado Climb & Ski"
 date = "2014-05-03"
 draft = false
 tags = ["skiing", "climbing", "colorado"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Went over to Colorado to hang out with Dan & Kate. We climbed some horrendous \"5.7\" that beat me down, even with my Alex Honnold shirt."
 +++
 

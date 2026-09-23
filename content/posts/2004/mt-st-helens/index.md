@@ -3,7 +3,7 @@ title = "Mt. St. Helens Climbing"
 date = "2004-07-21"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Last weekend I went up Mt. St."
 +++
 

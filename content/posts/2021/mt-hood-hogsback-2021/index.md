@@ -3,7 +3,7 @@ title = "Mt. Hood Hogsback 2021"
 date = "2021-05-15"
 draft = false
 tags = ["climbing", "mt-hood", "mountaineering", "gpx"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Slow climb up Mt. Hood with zero training longer that 30 minutes."
 +++
 

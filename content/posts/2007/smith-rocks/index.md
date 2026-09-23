@@ -3,7 +3,7 @@ title = "Smith Rock, Trad is slow"
 date = "2007-03-18"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Ron, Dan, Kate, Esther, Matt and I went over to Smith to get in some climbing. Ron and I did Moscow (5.6) and it took forever."
 +++
 

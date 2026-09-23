@@ -3,7 +3,7 @@ title = "East Wilman's Spire"
 date = "2013-07-10"
 draft = false
 tags = ["climbing", "washington"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "In"
 +++
 

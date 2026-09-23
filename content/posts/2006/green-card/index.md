@@ -3,7 +3,7 @@ title = "Climbing Green Card"
 date = "2006-03-15"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "After about 15 times not passing, I finally got my damn lead green card."
 +++
 

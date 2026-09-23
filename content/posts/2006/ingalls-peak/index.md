@@ -3,7 +3,7 @@ title = "Ingalls Peak"
 date = "2006-07-26"
 draft = false
 tags = ["climbing", "washington"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Esther, Matt, Kate, Dan and I went up to Washington to climb Ingalls Peak over the weekend. We were going to do Mt. Stuart..."
 +++
 

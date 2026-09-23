@@ -3,7 +3,7 @@ title = "Ice Climbing"
 date = "2006-09-11"
 draft = false
 tags = ["climbing", "mt-hood", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Esther, Matt, Keevin and I took an ice climbing class fromTimberline Mountain Guides up on the Elliot Glacier on Mt. Hood."
 +++
 

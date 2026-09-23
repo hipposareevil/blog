@@ -3,7 +3,7 @@ title = "Smith Rock in the Heat"
 date = "2006-09-27"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "A bunch of us (Angel, Jen, Ron, Matt, Esther, me, Scott and Jami) went over to Smith Rock to climb in the 90 degree heat and complain about our shoe rubber melting onto our feet. On Saturday we climbed Rabbit Stew (5.7 t…"
 +++
 

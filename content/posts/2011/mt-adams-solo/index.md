@@ -3,7 +3,7 @@ title = "Mt. Adams first solo"
 date = "2011-08-04"
 draft = false
 tags = ["climbing", "mt-adams", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "After a year of intervals and other painful training, I wanted to see how fast I could make it up a mountain. After going up the last few mountains with camping gear and lots of weight I decided to go as light as I could…"
 +++
 

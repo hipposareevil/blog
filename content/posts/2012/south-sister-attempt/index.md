@@ -3,7 +3,7 @@ title = "South Sister [attempt]"
 date = "2012-06-28"
 draft = false
 tags = ["climbing", "southsister", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "I went down to Bend to go camp on summit of South Sister like last year. I ended up turning around at 7500 feet as the snow had me concerned."
 +++
 

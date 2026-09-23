@@ -3,7 +3,7 @@ title = "five eleven"
 date = "2004-09-01"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "I finally climbed a 5.11 at the gym this week. I did it clean on Sunday and then again yesterday after a few false starts."
 +++
 

@@ -2,7 +2,7 @@
 title = "Via Ferrata Solo"
 date = "2026-01-29T20:02:29+13:00"
 draft = false
-tags = ["climb", "gpx", "hike"]
+tags = ["climbing", "gpx", "hike"]
 categories = ["climb"]
 
 featured = false

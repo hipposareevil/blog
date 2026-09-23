@@ -3,7 +3,7 @@ title = "Tietons Climbing"
 date = "2007-04-30"
 draft = false
 tags = ["climbing", "washington"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Kate, Dan, Ron, Angel, Keevin, Matt, Moira and I went up to the Tietons near Yakima to get in some crack climbing. The climbing was totally different than we (at least for me) were used to."
 +++
 

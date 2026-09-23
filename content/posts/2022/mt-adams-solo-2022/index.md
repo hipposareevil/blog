@@ -3,7 +3,7 @@ title = "Mt. Adams Solo 2022"
 date = "2022-06-29"
 draft = false
 tags = ["climbing", "mt-adams", "mountaineering", "gpx"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Plan was to camp on the summit but pack was demoralizingly heavy and the postholing was real. Camped at Picnic Counter and hung out in tent until morning for summit push."
 +++
 

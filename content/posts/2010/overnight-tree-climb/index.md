@@ -3,7 +3,7 @@ title = "Overnight Tree Climb"
 date = "2010-08-15"
 draft = false
 tags = ["climbing", "oregon"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "My parents got Ingrid and I a night camping in the trees with Pacific Tree Climbing Institute (PTCI), outside of Eugene. We met up with the guides Rob and Jason around 5 to get a tour of the tree where we'd be staying."
 +++
 

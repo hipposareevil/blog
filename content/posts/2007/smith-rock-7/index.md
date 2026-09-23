@@ -3,7 +3,7 @@ title = "Smith Rock, Spiderman"
 date = "2007-08-12"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Last weekend we went over to Smith Rock and climbed on Spiderman. I freaked out at the crux, again, when my feet blew and I was hanging by my hands above my gear."
 +++
 

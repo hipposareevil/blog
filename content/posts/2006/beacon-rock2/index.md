@@ -3,7 +3,7 @@ title = "Beacon Rock with Ron & Angel"
 date = "2006-09-26"
 draft = false
 tags = ["climbing", "columbia-gorge"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "For the Labor Day weekend Ron, Angel and I went up the South East corner of Beacon Rock. I thought we'd fly up it as I now know the route, but it actually took us like 8 hours."
 +++
 

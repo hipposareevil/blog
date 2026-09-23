@@ -3,7 +3,7 @@ title = "Mt. Taranaki"
 date = "2025-11-16"
 draft = false
 tags = ["mountaineering", "gpx"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "I went over to New Plymouth to climb Mt. Taranaki."
 +++
 

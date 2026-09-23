@@ -3,7 +3,7 @@ title = "Beacon Rock with Ben"
 date = "2005-09-25"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "On Friday night I climbed Beacon Rock in the Gorge with my friend Ben. It was a 6 pitch climb, with the last being a 200 foot scramble."
 +++
 

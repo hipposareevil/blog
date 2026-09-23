@@ -3,7 +3,7 @@ title = "Climbing in the West"
 date = "2007-09-03"
 draft = false
 tags = ["climbing", "travel"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Last week we went over to Wyoming via City Of Rocks, Idaho, to climb the Grand via the Upper Exum (5.4 II). While the weather and other things made us not climb the Grand, we had a good time at City Of Rocks and hiking a…"
 +++
 

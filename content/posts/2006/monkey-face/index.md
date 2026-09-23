@@ -3,7 +3,7 @@ title = "Monkey Face"
 date = "2006-10-17"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Last weekend Ron, Esther, Dan and I went over to Smith to climb Monkey Face. While Ron and I did the Pioneer Route they did the West Face Variation."
 +++
 

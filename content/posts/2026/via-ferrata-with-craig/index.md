@@ -2,7 +2,7 @@
 title = "Via Ferrata with Craig"
 date = "2026-01-09T19:04:03+13:00"
 draft = false
-tags = ["climb", "hike", "gpx"]
+tags = ["climbing", "hike", "gpx"]
 categories = ["climb"]
 
 featured = false

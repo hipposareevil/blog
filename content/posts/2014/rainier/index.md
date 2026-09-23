@@ -3,7 +3,7 @@ title = "Rainier!"
 date = "2014-07-18"
 draft = false
 tags = ["climbing", "biking", "washington", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "The Plan --------"
 +++
 

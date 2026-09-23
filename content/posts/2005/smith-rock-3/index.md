@@ -3,7 +3,7 @@ title = "Smith Rock Partying"
 date = "2005-09-18"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "This weekend all of us went out to Smith Rock to celebrate Kate and Sandra's birthday with some rock climbing. Friday night was some beer drinking and fire starting until 2am."
 +++
 

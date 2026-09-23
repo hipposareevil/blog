@@ -3,7 +3,7 @@ title = "Beacon Rock Bonking"
 date = "2006-07-09"
 draft = false
 tags = ["climbing", "columbia-gorge"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "This weekend Jami, Matt, Keevin and I went up to Beacon Rock in Washington to practice our trad climbing. I had done the route last year with my buddy Ben."
 +++
 

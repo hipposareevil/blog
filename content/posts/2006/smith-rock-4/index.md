@@ -3,7 +3,7 @@ title = "Smith Rock, Jami's Birthday"
 date = "2006-04-04"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "This weekend a bunch of us went over to Smith Rock to do some climbing, and celebrating Jami's 30th birthday. We just climbed on Saturday because Sunday it was raining and certain people were hung over."
 +++
 

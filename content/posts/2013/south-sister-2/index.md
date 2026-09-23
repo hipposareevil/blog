@@ -3,7 +3,7 @@ title = "South Sister Ski"
 date = "2013-05-01"
 draft = false
 tags = ["climbing", "oregon", "southsister", "mountaineering", "gpx"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Ski in"
 +++
 

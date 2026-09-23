@@ -3,7 +3,7 @@ title = "Group climb up Mt. Adams"
 date = "2011-07-24"
 draft = false
 tags = ["climbing", "mt-adams"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Ingrid and I wanted to go up Mt. Adams so we could experience the awesomeness that is the glisadding of 2000 feet."
 +++
 

@@ -3,7 +3,7 @@ title = "Mt. Hood Training"
 date = "2006-03-05"
 draft = false
 tags = ["climbing", "mt-hood", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Today Matt, Keevin and I went up to Timberline Lodge to get in a little hike at altitude and practiceour basic snow technique. We went above Palmer almost to Illumation Rock, but it was blowing snow pretty hard, so we to…"
 +++
 

@@ -3,7 +3,7 @@ title = "Mt Adams with Trey & Dan"
 date = "2021-06-19"
 draft = false
 tags = ["climbing", "mt-adams", "mountaineering", "gpx"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Trey and I had plan to camp on summit of Mt. Adams, like South Sister last month."
 +++
 

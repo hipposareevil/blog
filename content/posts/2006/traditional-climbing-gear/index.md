@@ -3,7 +3,7 @@ title = "Traditional Climbing Gear"
 date = "2006-03-30"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "I just received my first bit of trad gear today. I've been wanting to do trad climbing (where you place your own protection) for a year now, but never got around to buying gear or going out and practicing."
 +++
 

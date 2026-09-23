@@ -3,7 +3,7 @@ title = "PRG Ice Festival"
 date = "2008-09-27"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "We went to the PRG Ice Festival to watch Keevin compete. He came in 2nd in the first round, tied in the 2nd and was the only one to finish the route in the 3rd."
 +++
 

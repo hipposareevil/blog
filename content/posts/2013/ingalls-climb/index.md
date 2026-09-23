@@ -3,7 +3,7 @@ title = "Ingall's Climb"
 date = "2013-09-23"
 draft = false
 tags = ["climbing", "washington"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Ingalls climb with Matt, Shawn, Skye, Keevin and myself. Awesome weather and good climbing conditions."
 +++
 

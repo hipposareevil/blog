@@ -3,7 +3,7 @@ title = "Beacon Rock with Ron"
 date = "2007-07-24"
 draft = false
 tags = ["climbing", "columbia-gorge"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "On Tuesday Ron and I went up to Beacon Rock to get in some practice. I've been wanting to do some simulclimbing to get ready for the Grand Teton in August."
 +++
 

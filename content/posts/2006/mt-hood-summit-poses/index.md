@@ -3,7 +3,7 @@ title = "Mt. Hood Summit Poses"
 date = "2006-06-11"
 draft = false
 tags = ["climbing", "mt-hood", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Esther, Keevin, Matt and I went up Hood Friday night via the West Crater Rim route. We left Timberline Lodge a bit after midnight and hit the true summit around 7."
 +++
 

@@ -3,7 +3,7 @@ title = "Monkey Face Bike Tour Mountaineering"
 date = "2016-07-18"
 draft = false
 tags = ["climbing", "oregon"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Another mountaineering trip in the books. Terry and I had originally planned on doing Mt."
 +++
 

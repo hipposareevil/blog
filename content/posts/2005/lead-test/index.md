@@ -3,7 +3,7 @@ title = "Lead Test number 1"
 date = "2005-03-16"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Last night I took my lead test with Scott at the gym. I went up first to get it over with."
 +++
 

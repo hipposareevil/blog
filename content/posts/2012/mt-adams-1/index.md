@@ -3,7 +3,7 @@ title = "Mt. Adams Solo"
 date = "2012-07-27"
 draft = false
 tags = ["climbing", "mt-adams", "washington", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Ascent ------"
 +++
 

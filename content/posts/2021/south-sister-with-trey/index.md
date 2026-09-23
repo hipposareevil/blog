@@ -3,7 +3,7 @@ title = "South Sister with Trey"
 date = "2021-05-29"
 draft = false
 tags = ["climbing", "southsister", "mountaineering", "gpx"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Trey and I trudged up South Sister to bivy on the summit. We got there way past dark and it was chilly as I saved 6oz by leaving the tent fly in the car."
 +++
 

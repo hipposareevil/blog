@@ -3,7 +3,7 @@ title = "Training on Mt. Hood"
 date = "2006-06-05"
 draft = false
 tags = ["climbing", "mt-hood"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Keevin, Matt and I took a class through Timberline Mountain Guides on advanced snow technique and crevasse rescue. I think the rope mangement for crevasse rescue melted our brains but we eventually got it down."
 +++
 

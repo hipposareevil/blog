@@ -3,7 +3,7 @@ title = "Middle Sister with Ingrid"
 date = "2011-07-02"
 draft = false
 tags = ["climbing", "oregon", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Ascent ------"
 +++
 

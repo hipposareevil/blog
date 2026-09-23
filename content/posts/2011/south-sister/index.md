@@ -3,7 +3,7 @@ title = "South Sister Crowds"
 date = "2011-08-20"
 draft = false
 tags = ["climbing", "southsister", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Ingrid and I went over to Bend for the weekend to get up South Sister. We got a mellow alpine start, meaning getting to the trailhead at 9:30 along with a hundred other people."
 +++
 

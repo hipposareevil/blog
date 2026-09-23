@@ -3,7 +3,7 @@ title = "Weekends in the mountains"
 date = "2005-07-18"
 draft = false
 tags = ["babble", "climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Two weekends ago I went up to north to hang out with my buddy Sara on the Olympic penninsula. We did a little ride around Crescent Lake where we saw a bunch of kids jumping into the lake from a rock."
 +++
 

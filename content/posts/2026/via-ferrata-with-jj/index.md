@@ -2,7 +2,7 @@
 title = "Via Ferrata with JJ"
 date = "2026-02-15T14:30:43+13:00"
 draft = false
-tags = ["climb", "hike", "gpx"]
+tags = ["climbing", "hike", "gpx"]
 categories = ["climb"]
 
 featured = false

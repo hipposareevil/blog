@@ -3,7 +3,7 @@ title = "Mt. Hood attempts with Keevin"
 date = "2022-07-14"
 draft = false
 tags = ["climbing", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Three failures on Mt. Hood with Keevin."
 +++
 

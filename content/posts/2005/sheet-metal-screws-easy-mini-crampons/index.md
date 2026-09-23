@@ -3,7 +3,7 @@ title = "Sheet metal screws = easy mini-crampons"
 date = "2005-12-19"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "I've wanted to get crampon type deals for my shoes in case it gets icy - like last night. I was going to get Yak Tracks but they looked hokey."
 +++
 

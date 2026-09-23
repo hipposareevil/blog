@@ -3,7 +3,7 @@ title = "South Sister Solo"
 date = "2022-09-08"
 draft = false
 tags = ["climbing", "southsister", "mountaineering", "gpx"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Quick trip over to climb South Sister. Great weather and conditions on way up to having summit to myself for an hour."
 +++
 

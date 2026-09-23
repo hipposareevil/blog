@@ -3,7 +3,7 @@ title = "Mt Aspiring"
 date = "2023-12-15"
 draft = false
 tags = ["climbing", "mountaineering", "gpx"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "I went down to Wanaka to do a guided climb of Mt. Aspiring."
 +++
 

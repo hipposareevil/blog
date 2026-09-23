@@ -3,7 +3,7 @@ title = "Smith Rock, cos Mt. Hood a no go"
 date = "2007-05-13"
 draft = false
 tags = ["climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "As our Mt. Hood trip failed, Ingrid, Keevin, Matt, Moria and I went over to Smith to redeem ourselves."
 +++
 

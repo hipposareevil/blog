@@ -3,7 +3,7 @@ title = "Smith Rock Climbing and biking"
 date = "2004-10-18"
 draft = false
 tags = ["biking", "climbing"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Over the weekend I went over to Smith Rock with my climbing buddies. While it was raining on everyone else in Portland, it was sunny and warm in Terrebone (just North of Bend.) At night you could see all of the stars and…"
 +++
 

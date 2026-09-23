@@ -3,7 +3,7 @@ title = "Mt. Hood West Ridge"
 date = "2006-05-08"
 draft = false
 tags = ["climbing", "mt-hood", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Saturday morning my friends Keevin, Frank and I went up Mt. Hood from Timberline Lodge."
 +++
 

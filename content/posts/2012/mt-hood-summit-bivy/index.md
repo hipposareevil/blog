@@ -3,7 +3,7 @@ title = "Mt. Hood Summit Bivy"
 date = "2012-05-11"
 draft = false
 tags = ["climbing", "mt-hood", "oregon", "mountaineering"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Ascent -------"
 +++
 

@@ -3,7 +3,7 @@ title = "Bike Tour Mountaineering Mt. Adams"
 date = "2017-06-20"
 draft = false
 tags = ["climbing", "mountaineering", "biking"]
-categories = ["climbing"]
+categories = ["climb"]
 summary = "Dan was nice enough to join me on a bike-tour-mountaineering trip this year."
 +++
 
