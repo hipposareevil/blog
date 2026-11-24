@@ -174,9 +174,13 @@
     }
   }
 
-  function listHtml() {
-    var html = '<div class="theme-menu__list"><span class="theme-menu__heading">Mode</span>';
-    MODES.forEach(function (m) { html += menuItem("mode", m[0], m[1]); });
+  // withMode=false on desktop: light/dark has its own button next to the dropdown.
+  function listHtml(withMode) {
+    var html = '<div class="theme-menu__list">';
+    if (withMode) {
+      html += '<span class="theme-menu__heading">Mode</span>';
+      MODES.forEach(function (m) { html += menuItem("mode", m[0], m[1]); });
+    }
     html += '<span class="theme-menu__heading">Theme</span>';
     cfg.order.forEach(function (t) { html += menuItem("theme", t, label(t)); });
     html += '<span class="theme-menu__heading">Layout</span>';
@@ -208,25 +212,46 @@
       + '<button type="button" class="theme-menu__trigger flex items-center text-base bf-icon-color-hover"'
       + ' aria-haspopup="true" aria-label="Appearance, theme and layout" title="Appearance, theme and layout">' + TRIGGER_ICON + "</button></div>"
       + '<div class="menuhide"><div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl bg-neutral/25 dark:bg-neutral-800/25">'
-      + listHtml() + "</div></div>";
+      + listHtml(false) + "</div></div>";
     bindMenu(wrap, blowfishSwitcher);
     return wrap;
   }
 
   // Phone: the same three groups at the bottom of the hamburger menu.
+  var MOON = '<path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.800z"/>';
+  var SUN = '<path d="M12 7a5 5 0 100 10 5 5 0 000-10zM11 1h2v3h-2zM11 20h2v3h-2zM1 11h3v2H1zM20 11h3v2h-3zM4.2 5.600l1.400-1.400 2.100 2.100-1.400 1.400zM16.300 17.700l1.400-1.400 2.100 2.100-1.400 1.400zM4.200 18.400l2.100-2.100 1.400 1.400-2.100 2.100zM16.300 6.300l2.100-2.100 1.400 1.400-2.100 2.100z"/>';
+
+  // Desktop: standalone light/dark button beside the dropdown. Shows the mode you would switch TO.
+  function makeModeButton(blowfishSwitcher) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "theme-mode-btn flex items-center text-base bf-icon-color-hover";
+    b.addEventListener("click", function () { if (blowfishSwitcher) blowfishSwitcher.click(); refreshModeButtons(); });
+    return b;
+  }
+  function refreshModeButtons() {
+    var bs = document.querySelectorAll(".theme-mode-btn");
+    for (var i = 0; i < bs.length; i++) {
+      var dark = isDark();
+      bs[i].setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+      bs[i].setAttribute("title", dark ? "Switch to light mode" : "Switch to dark mode");
+      bs[i].innerHTML = '<span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">' + (dark ? SUN : MOON) + "</svg></span>";
+    }
+  }
+
   function injectMobileList(blowfishSwitcher) {
     var nav = document.querySelector('[role="dialog"] nav');
     if (!nav) return false;
     var box = document.createElement("div");
     box.className = "theme-menu theme-menu--inline";
-    box.innerHTML = listHtml();
+    box.innerHTML = listHtml(true);
     bindMenu(box, blowfishSwitcher);
     nav.appendChild(box);
     return true;
   }
 
   // Keep the checkmarks right when light/dark is changed by Blowfish (any button, or the OS).
-  new MutationObserver(refreshMenus).observe(root, { attributes: true, attributeFilter: ["class"] });
+  new MutationObserver(function () { refreshMenus(); refreshModeButtons(); }).observe(root, { attributes: true, attributeFilter: ["class"] });
 
   function makeButton(extraClass) {
     var b = document.createElement("button");
@@ -245,7 +270,9 @@
     // light/dark switching and we simply click it.
     var d = document.getElementById("appearance-switcher");
     if (d && d.parentNode && d.parentNode.parentNode) {
-      d.parentNode.parentNode.insertBefore(makeMenu(d), d.parentNode);
+      var menu = makeMenu(d);
+      d.parentNode.parentNode.insertBefore(menu, d.parentNode);
+      d.parentNode.parentNode.insertBefore(makeModeButton(d), menu);
       d.parentNode.style.display = "none";
       placed = true;
     }
@@ -266,6 +293,7 @@
     }
     refreshButtons();
     refreshMenus();
+    refreshModeButtons();
   }
 
   document.addEventListener("DOMContentLoaded", function () {

@@ -65,6 +65,8 @@
 /* ---------- header dropdown: mode + theme (all themes) ---------- */
 .theme-menu .menuhide { right: 0; }
 .theme-menu__trigger { cursor: pointer; line-height: 1; }
+.theme-mode-btn { cursor: pointer; line-height: 1; }
+.theme-mode-btn .icon svg { height: 1.2em; width: 1.2em; }
 .theme-menu__trigger .icon svg { height: 1.2em; width: 1.2em; }
 .theme-menu__chevron svg { height: .9em; width: .9em; margin-inline-start: .1rem; }
 .theme-menu__list { display: flex; flex-direction: column; gap: .6rem; min-width: 9rem; }
