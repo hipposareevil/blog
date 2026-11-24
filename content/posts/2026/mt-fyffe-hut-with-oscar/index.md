@@ -17,3 +17,6 @@ At bottom we had a root beer and visited his farm animal buddies on the way home
 
 {{< gpxmap height="700px" >}}
 
+## Photos
+
+{{< gallery id="gallery" >}}
