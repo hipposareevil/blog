@@ -1,7 +1,7 @@
-# Site themes (wizard / space opera / folktale)
+# Site themes (wizard / space opera / folktale / orbital)
 
 A runtime theme layer on top of Blowfish. Visitors get one dropdown in the header (half-circle icon)
-with three groups: **Mode** (light / dark), **Theme** (wizard / opera / folktale) and **Layout** (full / minimal).
+with three groups: **Mode** (light / dark), **Theme** (wizard / opera / folktale / orbital) and **Layout** (full / minimal).
 Choices are remembered in `localStorage`. On phones the same three groups sit at the bottom of the
 hamburger menu. `?theme=opera` and `?density=minimal` force a choice for a single visit
 (handy for sharing/previewing); both are then remembered.
@@ -11,6 +11,7 @@ hamburger menu. `?theme=opera` and `?density=minimal` force a choice for a singl
 | wizard | the existing look, unchanged (default) |
 | opera  | dark = Andor grit + Alien Nostromo amber + Blade Runner haze; light = Dune bone/ink |
 | folktale | old picture-book restraint: paper cream / midnight ink, oxblood + faded gold, IM Fell + EB Garamond type, thin double-rule plate frames, no glows. Until art is added to `assets/img/folktale/` it shows the default theme's art |
+| orbital | Culture / Foundation: pale ceramic hull (light) or deep slate (dark), teal + coral markers, Jost wide-tracked caps, ruler-tick panel frames. Art lives in `assets/img/orbital/` (thin-line orbital / Dyson-structure imagery) |
 
 Mode and Layout work inside each theme. Blowfish's own moon/sun button is hidden on desktop
 (the dropdown clicks it for you, so Blowfish's dark-mode logic is still the one doing the work).
@@ -35,7 +36,7 @@ photo cards and the Categories grid are content and stay full size. The strip he
 | `layouts/partials/theme-asset-url.html` | helper: resolves an `assets/` path to a URL |
 | `layouts/partials/theme-art-path.html`, `theme-art-url.html` | helpers: find a theme's file for a slot; the layouts use `theme-art-url` for the default theme's art |
 | `assets/img/<theme>/` | one folder of art per theme (`wizard/`, `opera/`), files named after the slots |
-| `static/fonts/opera/`, `static/fonts/folktale/` | self-hosted fonts (OFL), only fetched while that theme is active |
+| `static/fonts/opera/`, `folktale/`, `orbital/` | self-hosted fonts (OFL), only fetched while that theme is active |
 | `config/_default/menus.en.toml` | Categories / Tags / Archives are children of an **Index** entry |
 
 ## Art: slots
