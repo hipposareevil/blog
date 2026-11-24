@@ -16,11 +16,11 @@ Mode and Layout work inside each theme. Blowfish's own moon/sun button is hidden
 
 ### Layout: minimal
 
-`html[data-density="minimal"]` shrinks hero images to thin strips (about 1/5 of their height):
+`html[data-density="minimal"]` shrinks hero images to thin strips (roughly a quarter to a third of their height):
 the custom-layout hero boxes (Archives, Tags, Categories, Browse, Panoramic, Bike-trip), the Browse
 tiles, the Blowfish post hero and the home background. Thumbnails, "Related" cards, the Panoramic
-photo cards and the Categories grid are content and stay full size. The strip height is the `4.5rem`
-(and `3.75rem` for posts) in the "MINIMAL layout" block of `themes.css`.
+photo cards and the Categories grid are content and stay full size. The strip height is the `6.75rem`
+(and `5.625rem` for posts) in the "MINIMAL layout" block of `themes.css`.
 
 ## Files
 

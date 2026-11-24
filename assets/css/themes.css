@@ -99,13 +99,13 @@ main div[style*="aspect-ratio"] { width: 100%; max-width: 100%; box-sizing: bord
 .theme-menu--inline .theme-menu__item { font-size: 1.05rem; }
 
 /* ---------- MINIMAL layout (all themes) ----------
-   <html data-density="minimal">: hero images shrink to thin strips (about 1/5 of their height).
+   <html data-density="minimal">: hero images shrink to strips (roughly a quarter to a third of their height).
    Covers: the custom-layout hero boxes (archives, tags, categories, browse, panoramic, bike-trip),
    the Browse tiles, the home background, and Blowfish's own post heroes. */
 html[data-density="minimal"] main div[style*="aspect-ratio"][style*="min-height"] {
   aspect-ratio: auto !important;
   min-height: 0 !important;
-  height: 4.5rem !important;
+  height: 6.75rem !important;
 }
 html[data-density="minimal"] main div[style*="aspect-ratio"][style*="min-height"] > .flex.items-end { align-items: center; }
 html[data-density="minimal"] main div[style*="aspect-ratio"][style*="min-height"] > .flex.items-end > div { padding: .5rem 1.25rem; }
@@ -117,20 +117,20 @@ html[data-density="minimal"] main div[style*="aspect-ratio"][style*="min-height"
 html[data-density="minimal"] main div[style*="aspect-ratio"][style*="min-height"] p { display: none; }
 
 /* Browse tiles (square cards) -> strips */
-html[data-density="minimal"] main a > div[style*="aspect-ratio: 1 / 1"] { aspect-ratio: auto !important; height: 5rem; }
+html[data-density="minimal"] main a > div[style*="aspect-ratio: 1 / 1"] { aspect-ratio: auto !important; height: 7.5rem; }
 html[data-density="minimal"] main a > div[style*="aspect-ratio: 1 / 1"] p { display: none; }
 html[data-density="minimal"] #browse-cards { row-gap: 0; }
 html[data-density="minimal"] #browse-cards > a { margin-top: .75rem !important; }
 
 /* Home page background + its fade */
 html[data-density="minimal"] #background-image,
-html[data-density="minimal"] #background-image ~ div[class*="h-[1000px]"] { height: 200px !important; }
+html[data-density="minimal"] #background-image ~ div[class*="h-[1000px]"] { height: 300px !important; }
 
 /* Blowfish post heroes: basic / thumbAndBackground (fixed-height box), big (plain image), background */
-html[data-density="minimal"] article div.overflow-hidden[class*="h-36"] { height: 3.75rem !important; }
-html[data-density="minimal"] article img.single_hero_round { max-height: 6rem; width: 100%; object-fit: cover; }
-html[data-density="minimal"] .single_hero_background { height: 180px !important; }
-html[data-density="minimal"] #hero { height: 60px !important; }
+html[data-density="minimal"] article div.overflow-hidden[class*="h-36"] { height: 5.625rem !important; }
+html[data-density="minimal"] article img.single_hero_round { max-height: 9rem; width: 100%; object-fit: cover; }
+html[data-density="minimal"] .single_hero_background { height: 270px !important; }
+html[data-density="minimal"] #hero { height: 90px !important; }
 
 
 /* =============================================================================
