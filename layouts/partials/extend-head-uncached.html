@@ -1,0 +1,10 @@
+{{- /* Per-page theme art. Front matter key: featureimage<theme>, e.g.
+       featureimageopera = "img/opera/archives.svg"   (path under assets/)
+       theme.js swaps this page's hero image for it while that theme is active. */ -}}
+{{ with hugo.Data.themes }}
+  {{ range $name := .order }}
+    {{ with index $.Params (printf "featureimage%s" $name) }}
+      <meta name="theme-art" data-theme="{{ $name }}" content="{{ partial "theme-asset-url.html" . }}">
+    {{ end }}
+  {{ end }}
+{{ end }}

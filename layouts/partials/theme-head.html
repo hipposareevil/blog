@@ -1,0 +1,30 @@
+{{- /* Site themes: config, CSS, pre-paint script.
+       Include once from layouts/partials/extend-head.html:
+           {{ partial "theme-head.html" . }}
+       (extend-head is cached per site, so nothing page-specific belongs here;
+        per-page art is in extend-head-uncached.html.) */ -}}
+{{ with hugo.Data.themes }}
+  {{ $order := .order | default (slice "wizard") }}
+  {{ $cfg := dict }}
+  {{ range $name := $order }}
+    {{ $t := index hugo.Data.themes $name | default dict }}
+    {{ $entry := dict "label" ($t.label | default $name) }}
+    {{ with $t.logo }}{{ $entry = merge $entry (dict "logo" (partial "theme-asset-url.html" .)) }}{{ end }}
+    {{ $swaps := slice }}
+    {{ range $t.swap }}
+      {{ $swaps = $swaps | append (dict "match" .match "to" (partial "theme-asset-url.html" .to)) }}
+    {{ end }}
+    {{ $entry = merge $entry (dict "swap" $swaps) }}
+    {{ $cfg = merge $cfg (dict $name $entry) }}
+  {{ end }}
+  <script>window.SITE_THEMES = {{ dict "default" (.default | default "wizard") "order" $order "themes" $cfg | jsonify | safeJS }};</script>
+
+  {{ with resources.Get "css/themes.css" }}
+    {{ $css := . | resources.Minify | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ end }}
+  {{ with resources.Get "js/theme.js" }}
+    {{ $js := . | resources.Minify | resources.Fingerprint "sha512" }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+  {{ end }}
+{{ end }}

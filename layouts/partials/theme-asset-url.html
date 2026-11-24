@@ -1,0 +1,19 @@
+{{- /* Resolve a theme asset path to a URL.
+       assets/ file -> fingerprint-free RelPermalink (resized if raster)
+       http(s)://   -> as is
+       otherwise    -> treated as a static/ URL                         */ -}}
+{{- $p := . -}}
+{{- $out := $p -}}
+{{- if not (or (strings.HasPrefix $p "http:") (strings.HasPrefix $p "https:")) -}}
+  {{- with resources.Get (strings.TrimPrefix "/" $p) -}}
+    {{- if eq .MediaType.SubType "svg" -}}
+      {{- $out = .RelPermalink -}}
+    {{- else -}}
+      {{- $w := site.Params.backgroundImageWidth | default 1200 -}}
+      {{- $out = (.Resize (printf "%dx" (int $w))).RelPermalink -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $out = relURL $p -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}
