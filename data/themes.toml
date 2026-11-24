@@ -12,7 +12,7 @@
 # [<name>] block below   3) copy an html[data-theme="..."] block in assets/css/themes.css.
 
 default = "wizard"              # theme shown to first-time visitors (its art is what the layouts render)
-order   = ["wizard", "opera"]   # the dropdown lists these, in this order
+order   = ["wizard", "opera", "folktale"]   # the dropdown lists these, in this order
 
 slots = [
   "logo",               # header logo
@@ -46,3 +46,8 @@ slots = [
 
   # Per-page art: add  featureimageopera = "img/opera/archives.png"
   # to a page's front matter (e.g. content/archives/_index.md).
+
+[folktale]
+  label = "Folktale"
+  # Old picture-book look (paper, ink, thin rules). Drop images into assets/img/folktale/;
+  # until then every slot falls back to the default theme's art.
