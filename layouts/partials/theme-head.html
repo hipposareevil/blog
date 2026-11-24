@@ -5,19 +5,19 @@
         per-page art is in extend-head-uncached.html.) */ -}}
 {{ with hugo.Data.themes }}
   {{ $order := .order | default (slice "wizard") }}
+  {{ $slots := .slots | default slice }}
   {{ $cfg := dict }}
   {{ range $name := $order }}
     {{ $t := index hugo.Data.themes $name | default dict }}
-    {{ $entry := dict "label" ($t.label | default $name) }}
-    {{ with $t.logo }}{{ $entry = merge $entry (dict "logo" (partial "theme-asset-url.html" .)) }}{{ end }}
-    {{ $swaps := slice }}
-    {{ range $t.swap }}
-      {{ $swaps = $swaps | append (dict "match" .match "to" (partial "theme-asset-url.html" .to)) }}
+    {{ $art := dict }}
+    {{ range $slot := $slots }}
+      {{ with partial "theme-art-path.html" (dict "theme" $name "slot" $slot) }}
+        {{ $art = merge $art (dict $slot (partial "theme-asset-url.html" .)) }}
+      {{ end }}
     {{ end }}
-    {{ $entry = merge $entry (dict "swap" $swaps) }}
-    {{ $cfg = merge $cfg (dict $name $entry) }}
+    {{ $cfg = merge $cfg (dict $name (dict "label" ($t.label | default $name) "art" $art)) }}
   {{ end }}
-  <script>window.SITE_THEMES = {{ dict "default" (.default | default "wizard") "order" $order "themes" $cfg | jsonify | safeJS }};</script>
+  <script>window.SITE_THEMES = {{ dict "default" (.default | default "wizard") "order" $order "themes" $cfg "match" (.match | default slice) | jsonify | safeJS }};</script>
 
   {{ with resources.Get "css/themes.css" }}
     {{ $css := . | resources.Minify | resources.Fingerprint "sha512" }}

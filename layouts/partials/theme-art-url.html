@@ -1,0 +1,6 @@
+{{- /* URL of the DEFAULT theme's art for a slot. Use it in layouts:
+           <img src="{{ partial "theme-art-url.html" "archives" }}" data-art-slot="archives" ...>
+       theme.js swaps it for the visitor's theme (data-art-slot says which slot it is). */ -}}
+{{- $def := hugo.Data.themes.default | default "wizard" -}}
+{{- $p := partial "theme-art-path.html" (dict "theme" $def "slot" .) -}}
+{{- if $p -}}{{- return (partial "theme-asset-url.html" $p) -}}{{- else -}}{{- return "" -}}{{- end -}}

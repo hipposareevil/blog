@@ -1,60 +1,48 @@
-# -- Site themes (wizard / space opera) --------------------------------------
-# Runtime theme switcher. Visitors get a toggle button in the header; their
-# choice is remembered in localStorage. `?theme=opera` in a URL forces a theme.
+# -- Site themes ---------------------------------------------------------------
+# Runtime theme switcher: a dropdown in the header (Mode / Theme / Layout). The choice is
+# remembered in localStorage; `?theme=opera` in a URL forces a theme for one visit.
 # Styling lives in assets/css/themes.css under html[data-theme="<name>"].
 # Keys must stay lowercase.
+#
+# ART: every theme keeps its images in  assets/img/<name>/  named after the SLOTS below
+# (archives.png, tags.png, ...; png / jpg / webp / svg all work). A theme may leave slots out:
+# it then falls back to the slot's [fallback] and then to the default theme's art.
+#
+# TO ADD A THEME: 1) drop images into assets/img/<name>/   2) add "<name>" to `order` and a
+# [<name>] block below   3) copy an html[data-theme="..."] block in assets/css/themes.css.
 
-default = "wizard"              # theme shown to first-time visitors
-order   = ["wizard", "opera"]   # the toggle cycles through these
+default = "wizard"              # theme shown to first-time visitors (its art is what the layouts render)
+order   = ["wizard", "opera"]   # the dropdown lists these, in this order
+
+slots = [
+  "logo",               # header logo
+  "hero-home",          # home page background (used only if the home page shows one)
+  "default-featured",   # fallback image for posts without one
+  "archives", "tags", "categories", "gazing", "browse", "panoramic", "bike-trip",   # hero banners
+  "tile-tags", "tile-archives", "tile-categories", "tile-panoramic",                # Browse page tiles
+]
+
+# A slot that is empty in a theme uses this slot's image instead.
+[fallback]
+  tile-tags       = "tags"
+  tile-archives   = "archives"
+  tile-categories = "categories"
+  tile-panoramic  = "panoramic"
+
+# Images that Blowfish makes itself (no data-art-slot): matched by a piece of their src.
+[[match]]
+  contains = "/default-featured"
+  slot     = "default-featured"
+[[match]]
+  contains = "/hero-home"
+  slot     = "hero-home"
 
 [wizard]
-  label = "Wizard"              # the existing look - needs no overrides
+  label = "Wizard"
 
 [opera]
   label = "Space Opera"
-  logo  = "img/opera/logo.png"  # replaces the header logo (path under assets/)
-
-  # Swap any image whose src contains `match` (hard-coded <img src="/img/wizard_*.png"> in your layouts,
-  # Blowfish hero images, ...). `to` is a path under assets/.
-  [[opera.swap]]
-    match = "/img/background"
-    to    = "img/opera/hero-home.png"
-  [[opera.swap]]
-    match = "/img/default_featured"
-    to    = "img/opera/default-featured.png"
-  [[opera.swap]]
-    match = "/img/wizard_archive"
-    to    = "img/opera/archives.png"
-  [[opera.swap]]
-    match = "/img/wizard_tags"
-    to    = "img/opera/tags.png"
-  [[opera.swap]]
-    match = "/img/wizard_category"
-    to    = "img/opera/categories.png"
-  [[opera.swap]]
-    match = "/img/wizard_gazing"
-    to    = "img/opera/gazing.png"
-  [[opera.swap]]
-    match = "/img/wizard_browse"
-    to    = "img/opera/browse.png"
-  [[opera.swap]]
-    match = "/img/wizard_panoramic"
-    to    = "img/opera/panoramic.png"
-  [[opera.swap]]
-    match = "/img/wizard_bike_trip"
-    to    = "img/opera/bike-trip.png"
-  [[opera.swap]]
-    match = "/img/browse_tags"
-    to    = "img/opera/tags.png"
-  [[opera.swap]]
-    match = "/img/browse_archives"
-    to    = "img/opera/archives.png"
-  [[opera.swap]]
-    match = "/img/browse_categories"
-    to    = "img/opera/categories.png"
-  [[opera.swap]]
-    match = "/img/browse_panoramic"
-    to    = "img/opera/panoramic.png"
+  # dir = "img/opera"           # optional; defaults to img/<name>
 
   # Per-page art: add  featureimageopera = "img/opera/archives.png"
   # to a page's front matter (e.g. content/archives/_index.md).

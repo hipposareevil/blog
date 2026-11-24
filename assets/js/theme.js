@@ -2,8 +2,9 @@
  * Site theme switcher (wizard / space opera / ...).
  *
  * Loaded in <head> (blocking, tiny) so the theme is applied before first paint.
- * Config comes from window.SITE_THEMES (see layouts/partials/extend-head.html):
- *   { default, order: [...], themes: { name: { label, logo, swap:[{match,to}] } } }
+ * Config comes from window.SITE_THEMES (see layouts/partials/theme-head.html):
+ *   { default, order: [...], themes: { name: { label, art: { slot: url } } }, match: [{contains, slot}] }
+ * An <img data-art-slot="archives"> is swapped for the active theme's art for that slot.
  *
  * What it does
  *  1. picks a theme: ?theme=x  >  localStorage  >  config default
@@ -43,10 +44,8 @@
   root.setAttribute("data-density", density);
 
   /* ---------- art swapping ---------- */
-  // Blowfish hero markup, plus any <img> whose src contains /img/wizard_ or /img/browse_.
-  // Anything else: add class="theme-art" to the <img>.
-  var HERO = "#background-image, img.single_hero_round, .single_hero_background img, img.theme-art, "
-           + 'img[src*="/img/wizard_"], img[src*="/img/browse_"]';   // hard-coded art in custom layouts
+  // Blowfish hero markup, plus any <img data-art-slot="...">. Anything else: add class="theme-art".
+  var HERO = "#background-image, img.single_hero_round, .single_hero_background img, img.theme-art, img[data-art-slot]";
   var LOGO = "img.logo";
 
   function pageArt(t) {
@@ -54,17 +53,26 @@
     return m && m.getAttribute("content");
   }
 
-  function target(img, t) {
-    var conf = cfg.themes[t] || {};
-    if (img.matches(LOGO)) return conf.logo || null;
-    var own = pageArt(t);
-    if (own) return own;
+  // Which slot an <img> is: data-art-slot, else (Blowfish's own images) a piece of its original src.
+  function slotOf(img) {
+    var s = img.getAttribute("data-art-slot");
+    if (s) return s;
     var src = img.getAttribute("data-orig-src") || img.getAttribute("src") || "";
-    var swaps = conf.swap || [];
-    for (var i = 0; i < swaps.length; i++) {
-      if (src.indexOf(swaps[i].match) > -1) return swaps[i].to;
+    var m = cfg.match || [];
+    for (var i = 0; i < m.length; i++) {
+      if (src.indexOf(m[i].contains) > -1) return m[i].slot;
     }
     return null;
+  }
+
+  // The URL this image should show in theme t, or null = leave it as the page rendered it.
+  function target(img, t) {
+    var art = (cfg.themes[t] && cfg.themes[t].art) || {};
+    if (img.matches(LOGO)) return art.logo || null;
+    var slot = slotOf(img);
+    var own = pageArt(t);
+    if (own && !(slot && slot.indexOf("tile-") === 0)) return own;   // a page's own art; never the small Browse tiles
+    return slot ? (art[slot] || null) : null;
   }
 
   function apply(img) {

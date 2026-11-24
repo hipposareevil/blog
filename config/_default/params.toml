@@ -27,8 +27,8 @@ disableImageOptimizationMD = false
 disableTextInHeader = false
 backgroundImageWidth = 1200
 
-#defaultBackgroundImage = "img/background.png" # used as default for background images
-defaultFeaturedImage = "img/default_featured.png" # used as default for featured images in all articles
+#defaultBackgroundImage = "img/wizard/hero-home.png" # used as default for background images
+defaultFeaturedImage = "img/wizard/default-featured.png" # used as default for featured images in all articles
 hotlinkFeatureImage = false
 imagePosition = "50% 50%"
 
@@ -60,7 +60,7 @@ fingerprintAlgorithm = "sha512" # Valid values are "sha512" (default), "sha384",
 
 [homepage]
   layout = "background"
-#  homepageImage = "img/background.png"
+#  homepageImage = "img/wizard/hero-home.png"
   showRecent = true
   showRecentItems = 10
   showHero = true

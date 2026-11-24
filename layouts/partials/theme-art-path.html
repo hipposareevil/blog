@@ -1,0 +1,15 @@
+{{- /* Path (under assets/) of one theme's art for one slot, or "" if it has none.
+       Input: dict "theme" <name> "slot" <slot>.
+       Looks for <dir>/<slot>.* (dir defaults to img/<theme>), then for the slot's
+       fallback from data/themes.toml [fallback] (e.g. tile-tags -> tags).            */ -}}
+{{- $t := index hugo.Data.themes .theme | default dict -}}
+{{- $dir := $t.dir | default (printf "img/%s" .theme) -}}
+{{- $names := slice .slot -}}
+{{- with index (hugo.Data.themes.fallback | default dict) .slot -}}{{- $names = $names | append . -}}{{- end -}}
+{{- $found := "" -}}
+{{- range $names -}}
+  {{- if not $found -}}
+    {{- with resources.Match (printf "%s/%s.*" $dir .) -}}{{- $found = (index . 0).Name -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $found -}}
