@@ -3,6 +3,9 @@
 /resources/_gen/
 /.hugo_build.lock
 
+.claude
+
+
 # OS/editor cruft
 .DS_Store
 Thumbs.db

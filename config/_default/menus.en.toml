@@ -22,20 +22,27 @@
 #  weight = 20
 
 [[main]]
-  name = "Categories"
+  name = "Index"
   pageRef = "categories"
   weight = 22
 
 [[main]]
-  name = "Tags"
-  pageRef = "tags"
-  weight = 25
+  name = "Categories"
+  parent = "Index"
+  pageRef = "categories"
+  weight = 10
 
+[[main]]
+  name = "Tags"
+  parent = "Index"
+  pageRef = "tags"
+  weight = 20
 
 [[main]]
   name = "Archives"
+  parent = "Index"
   pageRef = "/archives"
-  weight = 28
+  weight = 30
 
 [[main]]
   name = "Browse"
